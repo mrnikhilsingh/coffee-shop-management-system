@@ -1,4 +1,6 @@
 <?php session_start() ?>
+<?php define("url", "http://localhost/workspace/ns-coffee/"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,26 +22,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
 
   <!-- icon -->
-  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css" />
-  <link rel="stylesheet" href="../css/animate.css" />
+  <link rel="stylesheet" href="<?php echo url; ?>/css/open-iconic-bootstrap.min.css" />
+  <link rel="stylesheet" href="<?php echo url; ?>/css/animate.css" />
 
-  <link rel="stylesheet" href="../css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="../css/owl.theme.default.min.css" />
-  <link rel="stylesheet" href="../css/magnific-popup.css" />
+  <link rel="stylesheet" href="<?php echo url; ?>/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="<?php echo url; ?>/css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="<?php echo url; ?>/css/magnific-popup.css" />
 
-  <link rel="stylesheet" href="../css/aos.css" />
-
-  <!-- icon -->
-  <link rel="stylesheet" href="../css/ionicons.min.css" />
-
-  <link rel="stylesheet" href="../css/bootstrap-datepicker.css" />
-  <link rel="stylesheet" href="../css/jquery.timepicker.css" />
+  <link rel="stylesheet" href="<?php echo url; ?>/css/aos.css" />
 
   <!-- icon -->
-  <link rel="stylesheet" href="../css/flaticon.css" />
-  <link rel="stylesheet" href="../css/icomoon.css" />
+  <link rel="stylesheet" href="<?php echo url; ?>/css/ionicons.min.css" />
+
+  <link rel="stylesheet" href="<?php echo url; ?>/css/bootstrap-datepicker.css" />
+  <link rel="stylesheet" href="<?php echo url; ?>/css/jquery.timepicker.css" />
+
+  <!-- icon -->
+  <link rel="stylesheet" href="<?php echo url; ?>/css/flaticon.css" />
+  <link rel="stylesheet" href="<?php echo url; ?>/css/icomoon.css" />
   <!-- main style -->
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="<?php echo url; ?>/css/style.css">
 </head>
 
 <body>
@@ -87,10 +89,10 @@
             </li>
           <?php } else { ?>
             <li class="nav-item">
-              <a href="auth/login.php" class="nav-link">login</a>
+              <a href="<?php echo url; ?>/auth/login.php" class="nav-link">login</a>
             </li>
             <li class="nav-item">
-              <a href="auth/register.php" class="nav-link">register</a>
+              <a href="<?php echo url; ?>/auth/register.php" class="nav-link">register</a>
             </li>
           <?php } ?>
         </ul>
