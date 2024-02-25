@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<?php session_start(); ?>
 <?php define("url", "http://localhost/workspace/ns-coffee/"); ?>
 
 <!DOCTYPE html>
@@ -70,7 +70,7 @@
           </li>
           <?php if (isset($_SESSION['username'])) {
           ?>
-            <!-- show logout button if session is started -->
+            <!-- show logout button if user is logged in started -->
             <li class="nav-item cart">
               <a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span></a>
             </li>

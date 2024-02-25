@@ -13,8 +13,8 @@
               with the necessary regelialia.
             </p>
             <p>
-              <a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
-              <a href="/menu.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
+              <a href="auth/login.php" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
+              <a href="menu.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
             </p>
           </div>
         </div>
@@ -33,8 +33,8 @@
               with the necessary regelialia.
             </p>
             <p>
-              <a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
-              <a href="/menu.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
+              <a href="auth/login.php" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
+              <a href="menu.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
             </p>
           </div>
         </div>
@@ -53,8 +53,8 @@
               with the necessary regelialia.
             </p>
             <p>
-              <a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
-              <a href="/menu.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
+              <a href="auth/login.php" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
+              <a href="menu.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
             </p>
           </div>
         </div>
@@ -225,7 +225,7 @@
               a large language ocean.
             </p>
             <p>
-              <a href="/menu.html" class="btn btn-primary btn-outline-primary px-4 py-3">View Full Menu</a>
+              <a href="menu.html" class="btn btn-primary btn-outline-primary px-4 py-3">View Full Menu</a>
             </p>
           </div>
         </div>

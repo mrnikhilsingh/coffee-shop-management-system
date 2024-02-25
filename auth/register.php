@@ -1,10 +1,12 @@
 <?php require "../includes/header.php"; ?>
 <?php require "../config/config.php"; ?>
 <?php
+//if user logged in 
+//he should not able to access register page
 if (isset($_SESSION['username'])) {
   header("Location: http://localhost/workspace/ns-coffee/index.php");
 }
-
+//code for user registration 
 if (isset($_POST['submit'])) {
   if (empty($_POST['username']) or empty($_POST['email']) or empty($_POST['password'])) {
     echo "<script>alert('one or more inputs are empty !!')</script>";
