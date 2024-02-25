@@ -1,0 +1,47 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 27/09/2018 06:27
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-coffee-cup:before { content: "\f100"; }
+.flaticon-choices:before { content: "\f101"; }
+.flaticon-coffee-bean:before { content: "\f102"; }
+.flaticon-delivery-truck:before { content: "\f103"; }
+    
+    $font-Flaticon-coffee-cup: "\f100";
+    $font-Flaticon-choices: "\f101";
+    $font-Flaticon-coffee-bean: "\f102";
+    $font-Flaticon-delivery-truck: "\f103";
