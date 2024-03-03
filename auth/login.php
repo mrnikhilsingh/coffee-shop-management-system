@@ -15,8 +15,8 @@ if (isset($_POST['submit'])) {
 
     // sql query
     // verifying the user email
-    $sql = "SELECT * FROM users WHERE email = '$email'";
-    $result = mysqli_query($conn, $sql) or die("Query Unsuccessful !!");
+    $query = "SELECT * FROM users WHERE email = '$email'";
+    $result = mysqli_query($conn, $query) or die("Query Unsuccessful !!");
 
     // if email is correct
     if (mysqli_num_rows($result) > 0) {

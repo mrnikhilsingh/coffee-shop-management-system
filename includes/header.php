@@ -54,25 +54,25 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a href="../index.php" class="nav-link">Home</a>
+            <a href="<?php echo url; ?>/index.php" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="<?php echo url; ?>/menu.php" class="nav-link">Menu</a>
           </li>
           <li class="nav-item">
-            <a href="services.html" class="nav-link">Services</a>
+            <a href="<?php echo url; ?>/services.html" class="nav-link">Services</a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link">About</a>
+            <a href="<?php echo url; ?>/about.html" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="<?php echo url; ?>/contact.html" class="nav-link">Contact</a>
           </li>
           <?php if (isset($_SESSION['username'])) {
           ?>
             <!-- show logout button if user is logged in started -->
             <li class="nav-item cart">
-              <a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span></a>
+              <a href="<?php echo url; ?>/cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

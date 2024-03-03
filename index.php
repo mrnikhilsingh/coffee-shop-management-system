@@ -1,4 +1,5 @@
 <?php require "includes/header.php"; ?>
+<?php require "config/config.php"; ?>
 
 <section class="home-slider owl-carousel">
   <div class="slider-item" style="background-image: url(images/bg_1.jpg)">
@@ -225,7 +226,7 @@
             a large language ocean.
           </p>
           <p>
-            <a href="menu.html" class="btn btn-primary btn-outline-primary px-4 py-3">View Full Menu</a>
+            <a href="menu.php" class="btn btn-primary btn-outline-primary px-4 py-3">View Full Menu</a>
           </p>
         </div>
       </div>
@@ -326,66 +327,33 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3">
-        <div class="menu-entry">
-          <a href="#" class="img" style="background-image: url(images/menu-1.jpg)"></a>
-          <div class="text text-center pt-4">
-            <h3><a href="#">Coffee Capuccino</a></h3>
-            <p>
-              A small river named Duden flows by their place and supplies
-            </p>
-            <p class="price"><span>$5.90</span></p>
-            <p>
-              <a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a>
-            </p>
+      <?php
+
+      $sql = "SELECT * FROM products";
+      $result = mysqli_query($conn, $sql) or die("Query Unsuccessful");
+
+      if (mysqli_num_rows($result) > 0) {
+
+        while ($product = mysqli_fetch_assoc($result)) {
+
+      ?>
+          <div class="col-md-3">
+            <div class="menu-entry">
+              <a target="_blank" href="products/product-single.php?id=<?php echo $product['id']; ?>" class="img" style="background-image: url(images/<?php echo $product['image']; ?>)"></a>
+              <div class="text text-center pt-4">
+                <h3><a href="#"><?php echo $product['name']; ?></a></h3>
+                <p>
+                  <?php echo $product['description']; ?>
+                </p>
+                <p class="price"><span>$<?php echo $product['price']; ?></span></p>
+                <p>
+                  <a target="_blank" href="products/product-single.php?id=<?php echo $product['id']; ?>" class="btn btn-primary btn-outline-primary">Show</a>
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="menu-entry">
-          <a href="#" class="img" style="background-image: url(images/menu-2.jpg)"></a>
-          <div class="text text-center pt-4">
-            <h3><a href="#">Coffee Capuccino</a></h3>
-            <p>
-              A small river named Duden flows by their place and supplies
-            </p>
-            <p class="price"><span>$5.90</span></p>
-            <p>
-              <a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="menu-entry">
-          <a href="#" class="img" style="background-image: url(images/menu-3.jpg)"></a>
-          <div class="text text-center pt-4">
-            <h3><a href="#">Coffee Capuccino</a></h3>
-            <p>
-              A small river named Duden flows by their place and supplies
-            </p>
-            <p class="price"><span>$5.90</span></p>
-            <p>
-              <a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="menu-entry">
-          <a href="#" class="img" style="background-image: url(images/menu-4.jpg)"></a>
-          <div class="text text-center pt-4">
-            <h3><a href="#">Coffee Capuccino</a></h3>
-            <p>
-              A small river named Duden flows by their place and supplies
-            </p>
-            <p class="price"><span>$5.90</span></p>
-            <p>
-              <a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a>
-            </p>
-          </div>
-        </div>
-      </div>
+      <?php }
+      } ?>
     </div>
   </div>
 </section>

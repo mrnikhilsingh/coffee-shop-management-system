@@ -17,8 +17,8 @@ if (isset($_POST['submit'])) {
     // $password = password_hash($_POST['password'],PASSWORD_DEFAULT); 
 
     // sql query
-    $sql = "INSERT INTO users (username, email, password) VALUES ('{$username}','{$email}','{$password}')";
-    mysqli_query($conn, $sql) or die("Query Unsuccessful");
+    $query = "INSERT INTO users (username, email, password) VALUES ('{$username}','{$email}','{$password}')";
+    mysqli_query($conn, $query) or die("Query Unsuccessful");
     // redirect to login page
     header("Location: login.php");
   }
@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
         <div class="col-md-7 col-sm-12 text-center ftco-animate">
           <h1 class="mb-3 mt-5 bread">Register</h1>
           <p class="breadcrumbs">
-            <span class="mr-2"><a href="../index.php">Home</a></span>
+            <span class="mr-2"><a href="<?php echo url; ?>/index.php">Home</a></span>
             <span>Register</span>
           </p>
         </div>
