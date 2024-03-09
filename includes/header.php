@@ -84,7 +84,7 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="auth/logout.php">Log Out</a></li>
+                <li><a class="dropdown-item" href="<?php echo url; ?>/auth/logout.php">Log Out</a></li>
               </ul>
             </li>
           <?php } else { ?>
