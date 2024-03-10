@@ -72,7 +72,7 @@
           ?>
             <!-- show logout button if user is logged in started -->
             <li class="nav-item cart">
-              <a href="<?php echo url; ?>/cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span></a>
+              <a href="<?php echo url; ?>/products/cart.php" class="nav-link"><span class="icon icon-shopping_cart"></span></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
