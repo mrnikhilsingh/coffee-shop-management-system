@@ -29,7 +29,7 @@ if (mysqli_num_rows($result2) > 0) {
         <div class="col-md-7 col-sm-12 text-center ftco-animate">
           <h1 class="mb-3 mt-5 bread">Cart</h1>
           <p class="breadcrumbs">
-            <span class="mr-2"><a href="index.php">Home</a></span>
+            <span class="mr-2"><a href="<?php echo url; ?>">Home</a></span>
             <span>Cart</span>
           </p>
         </div>
