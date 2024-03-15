@@ -347,7 +347,7 @@
                 </p>
                 <p class="price"><span>$<?php echo $product['price']; ?></span></p>
                 <p>
-                  <a target="_blank" href="products/product-single.php?id=<?php echo $product['id']; ?>" class="btn btn-primary btn-outline-primary">Show</a>
+                  <a href="products/product-single.php?id=<?php echo $product['id']; ?>" class="btn btn-primary btn-outline-primary">Show</a>
                 </p>
               </div>
             </div>
