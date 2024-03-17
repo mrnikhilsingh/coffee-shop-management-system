@@ -1,11 +1,11 @@
 @font-face {
   font-family: amsterdam;
-  src: url(/fonts/amsterdam/amsterdam-two-ttf.ttf);
+  src: url(../fonts/amsterdam/amsterdam-two-ttf.ttf);
 }
 
 @font-face {
   font-family: aloja;
-  src: url(/fonts/aloja/Aloja-extended.otf);
+  src: url(../fonts/aloja/Aloja-extended.otf);
 }
 
 :root {
