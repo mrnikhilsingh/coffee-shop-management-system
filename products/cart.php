@@ -61,7 +61,7 @@ if (mysqli_num_rows($result2) > 0) {
               ?>
                   <tr class="text-center">
                     <td class="product-remove">
-                      <a href="#"><span class="icon-close"></span></a>
+                      <a href="delete-product.php?id=<?php echo $row['product_id']; ?>"><span class="icon-close"></span></a>
                     </td>
 
                     <td class="image-prod">
@@ -103,7 +103,7 @@ if (mysqli_num_rows($result2) > 0) {
           </p>
           <p class="d-flex">
             <span>Delivery</span>
-            <span>$2.00</span>
+            <span>$5.00</span>
           </p>
           <p class="d-flex">
             <span>Discount</span>
@@ -112,7 +112,7 @@ if (mysqli_num_rows($result2) > 0) {
           <hr />
           <p class="d-flex total-price">
             <span>Total</span>
-            <span>$<?php echo $total['total'] + 2 - 3; ?></span>
+            <span>$<?php echo $total['total'] + 5 - 3; ?></span>
           </p>
         </div>
         <p class="text-center">
