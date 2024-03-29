@@ -10508,7 +10508,7 @@ h5,
   height: 54px !important;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  color: #c49b63 !important;
+  /* color: #c49b63 !important; */
   padding: 0;
 }
 
@@ -10681,7 +10681,7 @@ h5,
   height: 58px !important;
   padding-left: 15px;
   padding-right: 15px;
-  background: transparent !important;
+  background-color: transparent !important;
   color: rgba(255, 255, 255, 0.4) !important;
   font-size: 14px;
   border-radius: 0px;
@@ -10981,7 +10981,7 @@ h5,
 
 .form-control {
   height: 58px !important;
-  background: transparent !important;
+  background-color: transparent !important;
   color: rgba(255, 255, 255, 0.9) !important;
   font-size: 18px;
   border-radius: 0px;

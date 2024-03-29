@@ -19,6 +19,13 @@ if (mysqli_num_rows($result2) > 0) {
   $total = mysqli_fetch_assoc($result2);
 }
 
+// proceed for checkout
+if (isset($_POST['checkout'])) {
+  $_SESSION['total_price'] = $_POST['total-price'];
+
+  echo "<script>window.location.href = 'checkout.php'</script>";
+}
+
 ?>
 
 <section class="home-slider owl-carousel">
@@ -115,89 +122,13 @@ if (mysqli_num_rows($result2) > 0) {
             <span>$<?php echo $total['total'] + 5 - 3; ?></span>
           </p>
         </div>
-        <p class="text-center">
-          <a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a>
-        </p>
+        <form action="cart.php" method="post">
+          <input hidden name="total-price" type="text" value="<?php echo $total['total'] + 5 - 3; ?>">
+          <button class="btn btn-primary py-3 px-4" name="checkout" type="submit">Proceed to Checkout</button>
+        </form>
       </div>
     </div>
   </div>
 </section>
-
-<!-- <section class="ftco-section">
-  <div class="container">
-    <div class="row justify-content-center mb-5 pb-3">
-      <div class="col-md-7 heading-section ftco-animate text-center">
-        <span class="subheading">Discover</span>
-        <h2 class="mb-4">Related products</h2>
-        <p>
-          Far far away, behind the word mountains, far from the countries
-          Vokalia and Consonantia, there live the blind texts.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3">
-        <div class="menu-entry">
-          <a href="#" class="img" style="background-image: url(<?php echo url; ?>/images/menu-1.jpg)"></a>
-          <div class="text text-center pt-4">
-            <h3><a href="#">Coffee Capuccino</a></h3>
-            <p>
-              A small river named Duden flows by their place and supplies
-            </p>
-            <p class="price"><span>$5.90</span></p>
-            <p>
-              <a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="menu-entry">
-          <a href="#" class="img" style="background-image: url(<?php echo url; ?>/images/menu-2.jpg)"></a>
-          <div class="text text-center pt-4">
-            <h3><a href="#">Coffee Capuccino</a></h3>
-            <p>
-              A small river named Duden flows by their place and supplies
-            </p>
-            <p class="price"><span>$5.90</span></p>
-            <p>
-              <a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="menu-entry">
-          <a href="#" class="img" style="background-image: url(<?php echo url; ?>/images/menu-3.jpg)"></a>
-          <div class="text text-center pt-4">
-            <h3><a href="#">Coffee Capuccino</a></h3>
-            <p>
-              A small river named Duden flows by their place and supplies
-            </p>
-            <p class="price"><span>$5.90</span></p>
-            <p>
-              <a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="menu-entry">
-          <a href="#" class="img" style="background-image: url(<?php echo url; ?>/images/menu-4.jpg)"></a>
-          <div class="text text-center pt-4">
-            <h3><a href="#">Coffee Capuccino</a></h3>
-            <p>
-              A small river named Duden flows by their place and supplies
-            </p>
-            <p class="price"><span>$5.90</span></p>
-            <p>
-              <a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <?php require "../includes/footer.php"; ?>
