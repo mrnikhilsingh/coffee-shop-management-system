@@ -3,6 +3,18 @@
 
 <?php
 
+// if user logged in trying to directly access checkout page
+// denied to access
+if (!isset($_SERVER['HTTP_REFERER'])) {
+  echo "<script>window.location.href = '../index.php'</script>";
+}
+
+// if user not logged in
+// denied to access cart page
+if (!isset($_SESSION['user_id'])) {
+  header("Location: http://localhost/workspace/ns-coffee/index.php");
+}
+
 if (isset($_POST['submit'])) {
   $first_name = $_POST['first-name'];
   $last_name = $_POST['last-name'];
@@ -20,6 +32,7 @@ if (isset($_POST['submit'])) {
   $query = "INSERT INTO orders (first_name, last_name, country, street_address, town, zip_code, phone, email, user_id, status, total_price) VALUES ('{$first_name}','{$last_name}','{$country}','{$street_address}','{$town_city}','{$zip_code}','{$phone}','{$email}','{$user_id}','{$status}','{$total_price}')";
   mysqli_query($conn, $query) or die("Query Unsuccessful");
 
+  echo "<script>window.location.href = 'pay.php'</script>";
 }
 
 
@@ -51,7 +64,7 @@ if (isset($_POST['submit'])) {
           <div class="row align-items-end">
             <div class="col-md-6">
               <div class="form-group">
-                <label for="first-name">First Name</label>
+                <label for="first-name">First Name *</label>
                 <input type="text" id="first-name" name="first-name" class="form-control" placeholder="" />
               </div>
             </div>
@@ -64,12 +77,13 @@ if (isset($_POST['submit'])) {
             <div class="w-100"></div>
             <div class="col-md-12">
               <div class="form-group">
-                <label for="country">State / Country</label>
+                <label for="country">State / Country *</label>
                 <div class="select-wrap">
                   <div class="icon">
                     <span class="ion-ios-arrow-down"></span>
                   </div>
                   <select name="country" id="country" class="form-control">
+                    <option value="" selected hidden>Select State/Country</option>
                     <option value="France">France</option>
                     <option value="Italy">Italy</option>
                     <option value="India">India</option>
@@ -84,14 +98,14 @@ if (isset($_POST['submit'])) {
             <div class="w-100"></div>
             <div class="col-md-12">
               <div class="form-group">
-                <label for="street-address">Street Address</label>
+                <label for="street-address">Street Address *</label>
                 <input type="text" id="street-address" name="street-address" class="form-control" placeholder="House number and street name" />
               </div>
             </div>
             <div class="w-100"></div>
             <div class="col-md-6">
               <div class="form-group">
-                <label for="town-or-city">Town / City</label>
+                <label for="town-or-city">Town / City *</label>
                 <input type="text" id="town-or-city" name="town-or-city" class="form-control" placeholder="" />
               </div>
             </div>
@@ -104,13 +118,13 @@ if (isset($_POST['submit'])) {
             <div class="w-100"></div>
             <div class="col-md-6">
               <div class="form-group">
-                <label for="phone">Phone</label>
+                <label for="phone">Phone *</label>
                 <input type="text" id="phone" name="phone" class="form-control" placeholder="" />
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label for="email">Email Address</label>
+                <label for="email">Email Address *</label>
                 <input type="email" id="email" name="email" class="form-control" placeholder="" />
               </div>
             </div>
@@ -126,71 +140,6 @@ if (isset($_POST['submit'])) {
             </div>
           </div>
         </form>
-        <!-- END -->
-        <!-- <div class="row mt-5 pt-3 d-flex">
-          <div class="col-md-6 d-flex">
-            <div class="cart-detail cart-total ftco-bg-dark p-3 p-md-4">
-              <h3 class="billing-heading mb-4">Cart Total</h3>
-              <p class="d-flex">
-                <span>Subtotal</span>
-                <span>$20.60</span>
-              </p>
-              <p class="d-flex">
-                <span>Delivery</span>
-                <span>$0.00</span>
-              </p>
-              <p class="d-flex">
-                <span>Discount</span>
-                <span>$3.00</span>
-              </p>
-              <hr />
-              <p class="d-flex total-price">
-                <span>Total</span>
-                <span>$<?php echo $_SESSION['total_price']; ?></span>
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="cart-detail ftco-bg-dark p-3 p-md-4">
-              <h3 class="billing-heading mb-4">Payment Method</h3>
-              <div class="form-group">
-                <div class="col-md-12">
-                  <div class="radio">
-                    <label><input type="radio" name="optradio" class="mr-2" />
-                      Direct Bank Tranfer</label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-12">
-                  <div class="radio">
-                    <label><input type="radio" name="optradio" class="mr-2" />
-                      Check Payment</label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-12">
-                  <div class="radio">
-                    <label><input type="radio" name="optradio" class="mr-2" />
-                      Paypal</label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-12">
-                  <div class="checkbox">
-                    <label><input type="checkbox" value="" class="mr-2" /> I
-                      have read and accept the terms and conditions</label>
-                  </div>
-                </div>
-              </div>
-              <p>
-                <a href="#" class="btn btn-primary py-3 px-4">Place an order</a>
-              </p>
-            </div>
-          </div>
-        </div> -->
       </div>
       <!-- .col-md-8 -->
     </div>
@@ -212,7 +161,7 @@ if (isset($_POST['submit'])) {
   const email = document.querySelector("#email");
 
   billingForm.addEventListener("submit", (e) => {
-    if (firstName.value === "" || lastName.value === "" || country.value === "" || streetAddress.value === "" || townCity.value === "" || postcodeZip.value === "" || phone.value === "" || email.value === "") {
+    if (firstName.value === "" || country.value === "" || streetAddress.value === "" || townCity.value === "" || postcodeZip.value === "" || phone.value === "" || email.value === "") {
       e.preventDefault();
       alert("Please fill all the details !!");
     }

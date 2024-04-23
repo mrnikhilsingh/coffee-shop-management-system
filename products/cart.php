@@ -3,6 +3,8 @@
 
 <?php
 
+// if user not logged in
+// denied to access cart page
 if (!isset($_SESSION['user_id'])) {
   header("Location: http://localhost/workspace/ns-coffee/index.php");
 }
@@ -92,9 +94,16 @@ if (isset($_POST['checkout'])) {
 
                     <td class="total">$<?php echo $row['price'] * $row['quantity']; ?></td>
                   </tr>
+                <?php }
+              } else { ?>
+                <tr>
+                  <td>
+                    <h5>Your Cart is Empty</h5>
+                  </td>
+                </tr>
+                <!-- END TR-->
               <?php }
-              } ?>
-              <!-- END TR-->
+              ?>
             </tbody>
           </table>
         </div>
@@ -106,25 +115,49 @@ if (isset($_POST['checkout'])) {
           <h3>Cart Totals</h3>
           <p class="d-flex">
             <span>Subtotal</span>
-            <span>$<?php echo $total['total']; ?></span>
+            <span>$<?php
+                    if ($total['total'] > 0) {
+                      # code...
+                      echo number_format($total['total'], 2, '.', "");
+                    } else echo "0.00";
+                    ?>
+            </span>
           </p>
           <p class="d-flex">
             <span>Delivery</span>
-            <span>$5.00</span>
+            <span>$<?php
+                    if ($total['total'] > 0) {
+                      # code...
+                      echo "5.00";
+                    } else echo "0.00";
+                    ?></span>
           </p>
           <p class="d-flex">
             <span>Discount</span>
-            <span>$3.00</span>
+            <span>$<?php
+                    if ($total['total'] > 0) {
+                      # code...
+                      echo "3.00";
+                    } else echo "0.00";
+                    ?></span>
           </p>
           <hr />
           <p class="d-flex total-price">
             <span>Total</span>
-            <span>$<?php echo $total['total'] + 5 - 3; ?></span>
+            <span>$<?php
+                    if ($total['total'] > 0) {
+                      # code...
+
+                      echo number_format($total['total'] + 5 - 3, 2, '.', "");
+                    } else echo "0.00";
+                    ?></span>
           </p>
         </div>
         <form action="cart.php" method="post">
           <input hidden name="total-price" type="text" value="<?php echo $total['total'] + 5 - 3; ?>">
-          <button class="btn btn-primary py-3 px-4" name="checkout" type="submit">Proceed to Checkout</button>
+          <?php if ($total['total'] > 0) { ?>
+            <button class="btn btn-primary py-3 px-4" name="checkout" type="submit">Proceed to Checkout</button>
+          <?php } ?>
         </form>
       </div>
     </div>

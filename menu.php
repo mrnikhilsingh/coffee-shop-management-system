@@ -52,13 +52,13 @@
       </div>
       <div class="book p-4">
         <h3>Book a Table</h3>
-        <form action="#" class="appointment-form">
+        <form action="booking/book.php" method="POST" class="appointment-form">
           <div class="d-md-flex">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="First Name" />
+              <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name*" />
             </div>
             <div class="form-group ml-md-4">
-              <input type="text" class="form-control" placeholder="Last Name" />
+              <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name" />
             </div>
           </div>
           <div class="d-md-flex">
@@ -67,25 +67,29 @@
                 <div class="icon">
                   <span class="ion-md-calendar"></span>
                 </div>
-                <input type="text" class="form-control appointment_date" placeholder="Date" />
+                <input type="text" id="date" name="date" class="form-control appointment_date" placeholder="Date*" />
               </div>
             </div>
             <div class="form-group ml-md-4">
               <div class="input-wrap">
                 <div class="icon"><span class="ion-ios-clock"></span></div>
-                <input type="text" class="form-control appointment_time" placeholder="Time" />
+                <input type="text" id="time" name="time" class="form-control appointment_time" placeholder="Time*" />
               </div>
             </div>
             <div class="form-group ml-md-4">
-              <input type="text" class="form-control" placeholder="Phone" />
+              <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone*" />
             </div>
           </div>
           <div class="d-md-flex">
             <div class="form-group">
-              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+              <textarea name="message" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
             </div>
             <div class="form-group ml-md-4">
-              <input type="submit" value="Appointment" class="btn btn-white py-3 px-4" />
+              <?php if (isset($_SESSION['user_id'])) { ?>
+                <button type="submit" name="submit" class="btn btn-white py-3 px-4">Book a Table</button>
+              <?php } else { ?>
+                <a href="auth/login.php" class="btn btn-white py-3 px-4">Login to Book Table</a>
+              <?php } ?>
             </div>
           </div>
         </form>
@@ -452,5 +456,23 @@
     </div>
   </div>
 </section>
+
+<script>
+  const bookTableForm = document.querySelector(".appointment-form");
+
+  // input fields
+  const firstName = document.querySelector("#first_name");
+  const date = document.querySelector("#date");
+  const time = document.querySelector("#time");
+  const phone = document.querySelector("#phone");
+
+  // form authentication
+  bookTableForm.addEventListener("submit", (e) => {
+    if (firstName.value === "" || date.value === "" || time.value === "" || phone.value === "") {
+      e.preventDefault();
+      alert("Please fill all the Mandatory details !!");
+    }
+  })
+</script>
 
 <?php require "includes/footer.php"; ?>

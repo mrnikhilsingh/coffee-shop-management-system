@@ -3,6 +3,18 @@
 
 <?php
 
+// if user logged in trying to directly access delete page
+// denied to access
+if (!isset($_SERVER['HTTP_REFERER'])) {
+    echo "<script>window.location.href = '../index.php'</script>";
+}
+
+// if user not logged in
+// denied to access delete page
+if (!isset($_SESSION['user_id'])) {
+    header("Location: http://localhost/workspace/ns-coffee/index.php");
+}
+
 if (isset($_GET['id'])) {
 
     $product_id = $_GET['id'];
@@ -12,7 +24,7 @@ if (isset($_GET['id'])) {
     mysqli_query($conn, $query) or die("Query Unsuccessful");
 
     echo "<script>alert('item removed')</script>";
-    
+
     echo "<script>window.location.href = 'cart.php'</script>";
 }
 
