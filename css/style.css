@@ -11682,7 +11682,7 @@ textarea.form-control {
   height: 58px !important;
   padding-left: 0;
   padding-right: 0;
-  background: transparent !important;
+  background-color: transparent !important;
   color: rgba(255, 255, 255, 0.9) !important;
   font-size: 13px;
   border-radius: 0px;

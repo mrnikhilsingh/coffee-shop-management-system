@@ -103,122 +103,58 @@
     <div class="row">
       <div class="col-md-6">
         <h3 class="mb-5 heading-pricing ftco-animate">Desserts</h3>
-        <div class="pricing-entry d-flex ftco-animate">
-          <div class="img" style="background-image: url(images/dessert-1.jpg)"></div>
-          <div class="desc pl-3">
-            <div class="d-flex text align-items-center">
-              <h3><span>Cornish - Mackerel</span></h3>
-              <span class="price">$20.00</span>
+        <?php
+        // fetching desserts
+        $query1 = "SELECT * FROM products where type='dessert'";
+        $desserts = mysqli_query($conn, $query1) or die("Query Unsuccessful");
+
+        if (mysqli_num_rows($desserts) > 0) {
+          while ($dessert = mysqli_fetch_assoc($desserts)) {
+        ?>
+            <div class="pricing-entry d-flex ftco-animate">
+              <div class="img" style="background-image: url(images/<?php echo $dessert['image']; ?>)"></div>
+              <div class="desc pl-3">
+                <div class="d-flex text align-items-center">
+                  <h3><span><?php echo $dessert['name']; ?></span></h3>
+                  <span class="price">$<?php echo $dessert['price']; ?></span>
+                </div>
+                <div class="d-block">
+                  <p>
+                    <?php echo $dessert['description']; ?>
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="d-block">
-              <p>
-                A small river named Duden flows by their place and supplies
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="pricing-entry d-flex ftco-animate">
-          <div class="img" style="background-image: url(images/dessert-2.jpg)"></div>
-          <div class="desc pl-3">
-            <div class="d-flex text align-items-center">
-              <h3><span>Roasted Steak</span></h3>
-              <span class="price">$29.00</span>
-            </div>
-            <div class="d-block">
-              <p>
-                A small river named Duden flows by their place and supplies
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="pricing-entry d-flex ftco-animate">
-          <div class="img" style="background-image: url(images/dessert-3.jpg)"></div>
-          <div class="desc pl-3">
-            <div class="d-flex text align-items-center">
-              <h3><span>Seasonal Soup</span></h3>
-              <span class="price">$20.00</span>
-            </div>
-            <div class="d-block">
-              <p>
-                A small river named Duden flows by their place and supplies
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="pricing-entry d-flex ftco-animate">
-          <div class="img" style="background-image: url(images/dessert-4.jpg)"></div>
-          <div class="desc pl-3">
-            <div class="d-flex text align-items-center">
-              <h3><span>Chicken Curry</span></h3>
-              <span class="price">$20.00</span>
-            </div>
-            <div class="d-block">
-              <p>
-                A small river named Duden flows by their place and supplies
-              </p>
-            </div>
-          </div>
-        </div>
+        <?php }
+        } ?>
       </div>
 
       <div class="col-md-6">
         <h3 class="mb-5 heading-pricing ftco-animate">Drinks</h3>
-        <div class="pricing-entry d-flex ftco-animate">
-          <div class="img" style="background-image: url(images/drink-5.jpg)"></div>
-          <div class="desc pl-3">
-            <div class="d-flex text align-items-center">
-              <h3><span>Sea Trout</span></h3>
-              <span class="price">$49.91</span>
+        <?php
+        // fetching drinks
+        $query2 = "SELECT * FROM products where type='drink'";
+        $drinks = mysqli_query($conn, $query2) or die("Query Unsuccessful");
+
+        if (mysqli_num_rows($drinks) > 0) {
+          while ($drink = mysqli_fetch_assoc($drinks)) {
+        ?>
+            <div class="pricing-entry d-flex ftco-animate">
+              <div class="img" style="background-image: url(images/<?php echo $drink['image']; ?>)"></div>
+              <div class="desc pl-3">
+                <div class="d-flex text align-items-center">
+                  <h3><span><?php echo $drink['name']; ?></span></h3>
+                  <span class="price">$<?php echo $drink['price']; ?></span>
+                </div>
+                <div class="d-block">
+                  <p>
+                    <?php echo $drink['description']; ?>
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="d-block">
-              <p>
-                A small river named Duden flows by their place and supplies
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="pricing-entry d-flex ftco-animate">
-          <div class="img" style="background-image: url(images/drink-6.jpg)"></div>
-          <div class="desc pl-3">
-            <div class="d-flex text align-items-center">
-              <h3><span>Roasted Beef</span></h3>
-              <span class="price">$20.00</span>
-            </div>
-            <div class="d-block">
-              <p>
-                A small river named Duden flows by their place and supplies
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="pricing-entry d-flex ftco-animate">
-          <div class="img" style="background-image: url(images/drink-7.jpg)"></div>
-          <div class="desc pl-3">
-            <div class="d-flex text align-items-center">
-              <h3><span>Butter Fried Chicken</span></h3>
-              <span class="price">$20.00</span>
-            </div>
-            <div class="d-block">
-              <p>
-                A small river named Duden flows by their place and supplies
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="pricing-entry d-flex ftco-animate">
-          <div class="img" style="background-image: url(images/drink-8.jpg)"></div>
-          <div class="desc pl-3">
-            <div class="d-flex text align-items-center">
-              <h3><span>Chiken Filet</span></h3>
-              <span class="price">$20.00</span>
-            </div>
-            <div class="d-block">
-              <p>
-                A small river named Duden flows by their place and supplies
-              </p>
-            </div>
-          </div>
-        </div>
+        <?php }
+        } ?>
       </div>
     </div>
   </div>
@@ -250,203 +186,61 @@
             <div class="tab-content ftco-animate" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
                 <div class="row">
-                  <div class="col-md-4 text-center">
-                    <div class="menu-wrap">
-                      <a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-1.jpg)"></a>
-                      <div class="text">
-                        <h3><a href="#">Lemonade Juice</a></h3>
-                        <p>
-                          Far far away, behind the word mountains, far from
-                          the countries Vokalia and Consonantia.
-                        </p>
-                        <p class="price"><span>$2.90</span></p>
-                        <p>
-                          <a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a>
-                        </p>
+                  <?php
+                  // fetching drinks
+                  $query2 = "SELECT * FROM products where type='drink'";
+                  $drinks = mysqli_query($conn, $query2) or die("Query Unsuccessful");
+
+                  if (mysqli_num_rows($drinks) > 0) {
+                    while ($drink = mysqli_fetch_assoc($drinks)) {
+                  ?>
+                      <div class="col-md-4 text-center">
+                        <div class="menu-wrap">
+                          <a href="products/product-single.php?id=<?php echo $drink['id']; ?>" class="menu-img img mb-4" style="background-image: url(images/<?php echo $drink['image']; ?>)"></a>
+                          <div class="text">
+                            <h3><a href="products/product-single.php?id=<?php echo $drink['id']; ?>"><?php echo $drink['name']; ?></a></h3>
+                            <p>
+                              <?php echo $drink['description']; ?>
+                            </p>
+                            <p class="price"><span>$<?php echo $drink['price']; ?></span></p>
+                            <p>
+                              <a href="products/product-single.php?id=<?php echo $drink['id']; ?>" class="btn btn-primary btn-outline-primary">Show</a>
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="menu-wrap">
-                      <a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-2.jpg)"></a>
-                      <div class="text">
-                        <h3><a href="#">Pineapple Juice</a></h3>
-                        <p>
-                          Far far away, behind the word mountains, far from
-                          the countries Vokalia and Consonantia.
-                        </p>
-                        <p class="price"><span>$2.90</span></p>
-                        <p>
-                          <a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="menu-wrap">
-                      <a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-3.jpg)"></a>
-                      <div class="text">
-                        <h3><a href="#">Soda Drinks</a></h3>
-                        <p>
-                          Far far away, behind the word mountains, far from
-                          the countries Vokalia and Consonantia.
-                        </p>
-                        <p class="price"><span>$2.90</span></p>
-                        <p>
-                          <a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="menu-wrap">
-                      <a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-4.jpg)"></a>
-                      <div class="text">
-                        <h3><a href="#">Lemonade Juice</a></h3>
-                        <p>
-                          Far far away, behind the word mountains, far from
-                          the countries Vokalia and Consonantia.
-                        </p>
-                        <p class="price"><span>$2.90</span></p>
-                        <p>
-                          <a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="menu-wrap">
-                      <a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-5.jpg)"></a>
-                      <div class="text">
-                        <h3><a href="#">Pineapple Juice</a></h3>
-                        <p>
-                          Far far away, behind the word mountains, far from
-                          the countries Vokalia and Consonantia.
-                        </p>
-                        <p class="price"><span>$2.90</span></p>
-                        <p>
-                          <a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="menu-wrap">
-                      <a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-6.jpg)"></a>
-                      <div class="text">
-                        <h3><a href="#">Soda Drinks</a></h3>
-                        <p>
-                          Far far away, behind the word mountains, far from
-                          the countries Vokalia and Consonantia.
-                        </p>
-                        <p class="price"><span>$2.90</span></p>
-                        <p>
-                          <a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <?php }
+                  } ?>
                 </div>
               </div>
 
               <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
                 <div class="row">
-                  <div class="col-md-4 text-center">
-                    <div class="menu-wrap">
-                      <a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-1.jpg)"></a>
-                      <div class="text">
-                        <h3><a href="#">Hot Cake Honey</a></h3>
-                        <p>
-                          Far far away, behind the word mountains, far from
-                          the countries Vokalia and Consonantia.
-                        </p>
-                        <p class="price"><span>$2.90</span></p>
-                        <p>
-                          <a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a>
-                        </p>
+                  <?php
+                  // fetching desserts
+                  $query1 = "SELECT * FROM products where type='dessert'";
+                  $desserts = mysqli_query($conn, $query1) or die("Query Unsuccessful");
+
+                  if (mysqli_num_rows($desserts) > 0) {
+                    while ($dessert = mysqli_fetch_assoc($desserts)) {
+                  ?>
+                      <div class="col-md-4 text-center">
+                        <div class="menu-wrap">
+                          <a href="products/product-single.php?id=<?php echo $dessert['id']; ?>" class="menu-img img mb-4" style="background-image: url(images/<?php echo $dessert['image']; ?>)"></a>
+                          <div class="text">
+                            <h3><a href="products/product-single.php?id=<?php echo $dessert['id']; ?>"><?php echo $dessert['name']; ?></a></h3>
+                            <p>
+                              <?php echo $dessert['description']; ?>
+                            </p>
+                            <p class="price"><span>$<?php echo $dessert['price']; ?></span></p>
+                            <p>
+                              <a href="products/product-single.php?id=<?php echo $dessert['id']; ?>" class="btn btn-primary btn-outline-primary">Show</a>
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="menu-wrap">
-                      <a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-2.jpg)"></a>
-                      <div class="text">
-                        <h3><a href="#">Hot Cake Honey</a></h3>
-                        <p>
-                          Far far away, behind the word mountains, far from
-                          the countries Vokalia and Consonantia.
-                        </p>
-                        <p class="price"><span>$2.90</span></p>
-                        <p>
-                          <a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="menu-wrap">
-                      <a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-3.jpg)"></a>
-                      <div class="text">
-                        <h3><a href="#">Hot Cake Honey</a></h3>
-                        <p>
-                          Far far away, behind the word mountains, far from
-                          the countries Vokalia and Consonantia.
-                        </p>
-                        <p class="price"><span>$2.90</span></p>
-                        <p>
-                          <a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="menu-wrap">
-                      <a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-4.jpg)"></a>
-                      <div class="text">
-                        <h3><a href="#">Hot Cake Honey</a></h3>
-                        <p>
-                          Far far away, behind the word mountains, far from
-                          the countries Vokalia and Consonantia.
-                        </p>
-                        <p class="price"><span>$2.90</span></p>
-                        <p>
-                          <a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="menu-wrap">
-                      <a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-5.jpg)"></a>
-                      <div class="text">
-                        <h3><a href="#">Hot Cake Honey</a></h3>
-                        <p>
-                          Far far away, behind the word mountains, far from
-                          the countries Vokalia and Consonantia.
-                        </p>
-                        <p class="price"><span>$2.90</span></p>
-                        <p>
-                          <a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="menu-wrap">
-                      <a href="#" class="menu-img img mb-4" style="background-image: url(images/dessert-6.jpg)"></a>
-                      <div class="text">
-                        <h3><a href="#">Hot Cake Honey</a></h3>
-                        <p>
-                          Far far away, behind the word mountains, far from
-                          the countries Vokalia and Consonantia.
-                        </p>
-                        <p class="price"><span>$2.90</span></p>
-                        <p>
-                          <a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <?php }
+                  } ?>
                 </div>
               </div>
             </div>
