@@ -60,13 +60,13 @@
             <a href="<?php echo url; ?>/menu.php" class="nav-link">Menu</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo url; ?>/services.html" class="nav-link">Services</a>
+            <a href="<?php echo url; ?>/services.php" class="nav-link">Services</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo url; ?>/about.html" class="nav-link">About</a>
+            <a href="<?php echo url; ?>/about.php" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo url; ?>/contact.html" class="nav-link">Contact</a>
+            <a href="<?php echo url; ?>/contact.php" class="nav-link">Contact</a>
           </li>
           <?php if (isset($_SESSION['username'])) {
           ?>
