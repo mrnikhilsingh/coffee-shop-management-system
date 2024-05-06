@@ -70,7 +70,7 @@
           </li>
           <?php if (isset($_SESSION['username'])) {
           ?>
-            <!-- show logout button if user is logged in started -->
+            <!-- show logout button if user is logged in -->
             <li class="nav-item cart">
               <a href="<?php echo url; ?>/products/cart.php" class="nav-link"><span class="icon icon-shopping_cart"></span></a>
             </li>
@@ -79,8 +79,8 @@
                 <?php echo $_SESSION['username'] ?>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="<?php echo url; ?>/users/bookings.php">My Bookings</a></li>
+                <li><a class="dropdown-item" href="<?php echo url; ?>/users/orders.php">My Orders</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
