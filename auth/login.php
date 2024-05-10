@@ -2,6 +2,8 @@
 <?php require "../config/config.php"; ?>
 
 <?php
+//if user logged in 
+//he should not able to access register page
 if (isset($_SESSION['username'])) {
   header("Location: http://localhost/workspace/ns-coffee/index.php");
 }
@@ -67,15 +69,19 @@ if (isset($_POST['submit'])) {
           <div class="row align-items-end">
             <div class="col-md-12">
               <div class="form-group">
-                <label for="Email">Email</label>
-                <input name="email" type="text" class="form-control" placeholder="Email" />
+                <label for="email">Email</label>
+                <input name="email" id="email" type="text" class="form-control" placeholder="Email" />
               </div>
             </div>
             <div class="col-md-12">
               <div class="form-group">
-                <label for="Password">Password</label>
-                <input name="password" type="password" class="form-control" placeholder="Password" />
+                <label for="password">Password</label>
+                <input name="password" id="password" type="password" class="form-control" placeholder="Password" />
               </div>
+            </div>
+            <div class="col-md-12">
+              <a href="forgot-password.php" class="">Forgot Password |</a>
+              <a href="register.php" class="">Don't have an Account</a>
             </div>
             <div class="col-md-12">
               <div class="form-group mt-4">

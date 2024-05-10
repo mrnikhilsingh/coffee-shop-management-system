@@ -68,6 +68,9 @@ if (isset($_POST['submit'])) {
               </div>
             </div>
             <div class="col-md-12">
+              <a href="login.php" class="">Already have an Account</a>
+            </div>
+            <div class="col-md-12">
               <div class="form-group mt-4">
                 <div class="radio">
                   <button class="btn btn-primary py-3 px-4" name="submit">
