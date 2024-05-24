@@ -34,7 +34,7 @@ $query_result = mysqli_query($conn, $order_query) or die("Query Unsuccessful");
                 <th class="text-center">Phone</th>
                 <th class="text-center">Total Price</th>
                 <th class="text-center">Status</th>
-                <th class="text-center">Update</th>
+                <th class="text-center">Update Status</th>
                 <th class="text-center">Delete</th>
               </tr>
             </thead>
@@ -54,7 +54,7 @@ $query_result = mysqli_query($conn, $order_query) or die("Query Unsuccessful");
                     <td class="text-center"><?php echo $orders["phone"]; ?></td>
                     <td class="text-center">$<?php echo $orders["total_price"]; ?></td>
                     <td class="text-center"><?php echo $orders["status"]; ?></td>
-                    <td class="text-center"><a href="update-status.php?id=<?php echo $orders['id']; ?>" class="btn btn-warning">Update Status</a></td>
+                    <td class="text-center"><a href="update-status.php?id=<?php echo $orders['id']; ?>" class="btn btn-warning">Update</a></td>
                     <td class="text-center"><a href="delete-orders.php?id=<?php echo $orders['id']; ?>" class="btn btn-danger">Delete</a></td>
                   </tr>
               <?php }

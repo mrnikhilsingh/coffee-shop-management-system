@@ -33,6 +33,7 @@ $query_result = mysqli_query($conn, $booking_query) or die("Query Unsuccessful")
                 <th class="text-center">Phone</th>
                 <th class="text-center">Message</th>
                 <th class="text-center">Status</th>
+                <th class="text-center">Update Status</th>
                 <th class="text-center">Delete</th>
               </tr>
             </thead>
@@ -51,6 +52,7 @@ $query_result = mysqli_query($conn, $booking_query) or die("Query Unsuccessful")
                     <td class="text-center"><?php echo $booking["phone"]; ?></td>
                     <td class="text-center"><?php echo $booking["message"]; ?></td>
                     <td class="text-center"><?php echo $booking["status"]; ?></td>
+                    <td class="text-center"><a href="update-status.php?id=<?php echo $booking['id']; ?>" class="btn btn-warning">Update</a></td>
                     <td class="text-center"><a href="delete-bookings.php?id=<?php echo $booking['id']; ?>" class="btn btn-danger">Delete</a></td>
                   </tr>
               <?php }
