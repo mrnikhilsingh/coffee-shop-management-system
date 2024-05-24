@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: http://localhost/workspace/ns-coffee/index.php");
 }
 
-//fetch all bookings from db
+//fetch all orders from db
 $query = "SELECT * FROM orders WHERE user_id = {$_SESSION['user_id']}";
 $result = mysqli_query($conn, $query) or die("Query Unsuccessful");
 

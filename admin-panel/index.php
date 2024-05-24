@@ -3,7 +3,7 @@
 
 <?php 
 
-//if user logged out in 
+//if admin logged out in 
 //he should not able to access index page
 if (!isset($_SESSION['admin_name'])) {
   header("Location: http://localhost/workspace/ns-coffee/admin-panel/admins/login.php");
