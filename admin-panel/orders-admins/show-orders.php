@@ -4,7 +4,7 @@
 <?php
 
 // if admin not logged in
-// denied to access bookings page
+// denied to access orders page
 if (!isset($_SESSION['admin_name'])) {
     header("Location: http://localhost/workspace/ns-coffee/index.php");
 }
