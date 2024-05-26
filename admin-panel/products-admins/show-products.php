@@ -21,16 +21,16 @@ $query_result = mysqli_query($conn, $product_query) or die("Query Unsuccessful")
       <div class="card">
         <div class="card-body">
           <h5 class="card-title mb-4 d-inline">Foods</h5>
-          <a href="create-products.html" class="btn btn-primary mb-4 text-center float-right">Create Products</a>
+          <a href="create-products.php" class="btn btn-primary mb-4 text-center float-right">Add New Product</a>
           <table class="table">
             <thead>
               <tr>
-                <th>Id</th>
-                <th>name</th>
-                <th>image</th>
-                <th>price</th>
-                <th>type</th>
-                <th>delete</th>
+                <th class="text-center">Id</th>
+                <th class="text-center">name</th>
+                <th class="text-center">image</th>
+                <th class="text-center">price</th>
+                <th class="text-center">type</th>
+                <th class="text-center">delete</th>
               </tr>
             </thead>
             <tbody>
@@ -39,12 +39,12 @@ $query_result = mysqli_query($conn, $product_query) or die("Query Unsuccessful")
                 while ($product = mysqli_fetch_assoc($query_result)) {
               ?>
                   <tr>
-                    <td><?php echo $product['id']; ?></td>
-                    <td><?php echo $product['name']; ?></td>
-                    <td><?php echo $product['image']; ?></td>
-                    <td>$<?php echo $product['price']; ?></td>
-                    <td><?php echo $product['type']; ?></td>
-                    <td><a href="delete-products.html" class="btn btn-danger  text-center ">delete</a></td>
+                    <td class="text-center"><?php echo $product['id']; ?></td>
+                    <td class="text-center"><?php echo $product['name']; ?></td>
+                    <td class="text-center"><img src="../../images/<?php echo $product['image']; ?>" height="60px" width="60px"></td>
+                    <td class="text-center">$<?php echo $product['price']; ?></td>
+                    <td class="text-center"><?php echo $product['type']; ?></td>
+                    <td class="text-center"><a href="delete-products.html" class="btn btn-danger  text-center ">delete</a></td>
                   </tr>
               <?php }
               } ?>
