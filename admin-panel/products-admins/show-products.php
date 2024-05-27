@@ -44,7 +44,7 @@ $query_result = mysqli_query($conn, $product_query) or die("Query Unsuccessful")
                     <td class="text-center"><img src="../../images/<?php echo $product['image']; ?>" height="60px" width="60px"></td>
                     <td class="text-center">$<?php echo $product['price']; ?></td>
                     <td class="text-center"><?php echo $product['type']; ?></td>
-                    <td class="text-center"><a href="delete-products.html" class="btn btn-danger  text-center ">delete</a></td>
+                    <td class="text-center"><a href="delete-product.php?id=<?php echo $product['id']; ?>" class="btn btn-danger  text-center ">delete</a></td>
                   </tr>
               <?php }
               } ?>
