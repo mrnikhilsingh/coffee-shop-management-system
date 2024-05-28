@@ -101,7 +101,7 @@
 <section class="ftco-section">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-5 pb-3">
         <h3 class="mb-5 heading-pricing ftco-animate">Desserts</h3>
         <?php
         // fetching desserts
@@ -129,8 +129,64 @@
         } ?>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6 mb-5 pb-3">
         <h3 class="mb-5 heading-pricing ftco-animate">Drinks</h3>
+        <?php
+        // fetching drinks
+        $query2 = "SELECT * FROM products where type='drink'";
+        $drinks = mysqli_query($conn, $query2) or die("Query Unsuccessful");
+
+        if (mysqli_num_rows($drinks) > 0) {
+          while ($drink = mysqli_fetch_assoc($drinks)) {
+        ?>
+            <div class="pricing-entry d-flex ftco-animate">
+              <div class="img" style="background-image: url(images/<?php echo $drink['image']; ?>)"></div>
+              <div class="desc pl-3">
+                <div class="d-flex text align-items-center">
+                  <h3><span><?php echo $drink['name']; ?></span></h3>
+                  <span class="price">$<?php echo $drink['price']; ?></span>
+                </div>
+                <div class="d-block">
+                  <p>
+                    <?php echo $drink['description']; ?>
+                  </p>
+                </div>
+              </div>
+            </div>
+        <?php }
+        } ?>
+      </div>
+
+      <div class="col-md-6">
+        <h3 class="mb-5 heading-pricing ftco-animate">Starter</h3>
+        <?php
+        // fetching drinks
+        $query2 = "SELECT * FROM products where type='drink'";
+        $drinks = mysqli_query($conn, $query2) or die("Query Unsuccessful");
+
+        if (mysqli_num_rows($drinks) > 0) {
+          while ($drink = mysqli_fetch_assoc($drinks)) {
+        ?>
+            <div class="pricing-entry d-flex ftco-animate">
+              <div class="img" style="background-image: url(images/<?php echo $drink['image']; ?>)"></div>
+              <div class="desc pl-3">
+                <div class="d-flex text align-items-center">
+                  <h3><span><?php echo $drink['name']; ?></span></h3>
+                  <span class="price">$<?php echo $drink['price']; ?></span>
+                </div>
+                <div class="d-block">
+                  <p>
+                    <?php echo $drink['description']; ?>
+                  </p>
+                </div>
+              </div>
+            </div>
+        <?php }
+        } ?>
+      </div>
+
+      <div class="col-md-6">
+        <h3 class="mb-5 heading-pricing ftco-animate">Main Dish</h3>
         <?php
         // fetching drinks
         $query2 = "SELECT * FROM products where type='drink'";
@@ -180,6 +236,8 @@
               <a class="nav-link active" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Drinks</a>
 
               <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Desserts</a>
+
+              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-3" aria-selected="false">Main Dish</a>
             </div>
           </div>
           <div class="col-md-12 d-flex align-items-center">
@@ -219,6 +277,36 @@
                   <?php
                   // fetching desserts
                   $query1 = "SELECT * FROM products where type='dessert'";
+                  $desserts = mysqli_query($conn, $query1) or die("Query Unsuccessful");
+
+                  if (mysqli_num_rows($desserts) > 0) {
+                    while ($dessert = mysqli_fetch_assoc($desserts)) {
+                  ?>
+                      <div class="col-md-4 text-center">
+                        <div class="menu-wrap">
+                          <a href="products/product-single.php?id=<?php echo $dessert['id']; ?>" class="menu-img img mb-4" style="background-image: url(images/<?php echo $dessert['image']; ?>)"></a>
+                          <div class="text">
+                            <h3><a href="products/product-single.php?id=<?php echo $dessert['id']; ?>"><?php echo $dessert['name']; ?></a></h3>
+                            <p>
+                              <?php echo $dessert['description']; ?>
+                            </p>
+                            <p class="price"><span>$<?php echo $dessert['price']; ?></span></p>
+                            <p>
+                              <a href="products/product-single.php?id=<?php echo $dessert['id']; ?>" class="btn btn-primary btn-outline-primary">Show</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                  <?php }
+                  } ?>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-3-tab">
+                <div class="row">
+                  <?php
+                  // fetching main dish
+                  $query1 = "SELECT * FROM products where type='main dish'";
                   $desserts = mysqli_query($conn, $query1) or die("Query Unsuccessful");
 
                   if (mysqli_num_rows($desserts) > 0) {

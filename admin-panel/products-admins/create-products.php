@@ -84,8 +84,11 @@ if (isset($_POST['submit'])) {
             <div class="form-outline mb-4 mt-4">
               <select name="type" class="form-select  form-control" aria-label="Default select example">
                 <option selected disabled hidden>Choose Type</option>
+                <option value="coffee">coffee</option>
                 <option value="drink">drink</option>
                 <option value="dessert">dessert</option>
+                <option value="starter">starter</option>
+                <option value="main dish">main dish</option>
               </select>
             </div>
             <br>
