@@ -333,7 +333,7 @@
     <div class="row">
       <?php
 
-      $sql = "SELECT * FROM products";
+      $sql = "SELECT * FROM products WHERE type = 'coffee'";
       $result = mysqli_query($conn, $sql) or die("Query Unsuccessful");
 
       if (mysqli_num_rows($result) > 0) {
@@ -366,28 +366,28 @@
   <div class="container-wrap">
     <div class="row no-gutters">
       <div class="col-md-3 ftco-animate">
-        <a href="#" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-1.jpg)">
+        <a href="" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-1.jpg)">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
             <span class="icon-search"></span>
           </div>
         </a>
       </div>
       <div class="col-md-3 ftco-animate">
-        <a href="#" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-3.jpg)">
+        <a href="" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-2.jpg)">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
             <span class="icon-search"></span>
           </div>
         </a>
       </div>
       <div class="col-md-3 ftco-animate">
-        <a href="#" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-3.jpg)">
+        <a href="" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-3.jpg)">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
             <span class="icon-search"></span>
           </div>
         </a>
       </div>
       <div class="col-md-3 ftco-animate">
-        <a href="#" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-4.jpg)">
+        <a href="" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-4.jpg)">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
             <span class="icon-search"></span>
           </div>
