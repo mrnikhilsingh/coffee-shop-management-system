@@ -233,16 +233,48 @@
         <div class="row">
           <div class="col-md-12 nav-link-wrap mb-5">
             <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <a class="nav-link active" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Drinks</a>
+              <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Coffee</a>
+
+              <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Drinks</a>
 
               <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Desserts</a>
 
-              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-3" aria-selected="false">Main Dish</a>
+              <a class="nav-link" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-3" aria-selected="false">Main Dish</a>
             </div>
           </div>
           <div class="col-md-12 d-flex align-items-center">
             <div class="tab-content ftco-animate" id="v-pills-tabContent">
-              <div class="tab-pane fade show active" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+                <div class="row">
+                  <?php
+                  // fetching coffee
+                  $query2 = "SELECT * FROM products where type='coffee'";
+                  $drinks = mysqli_query($conn, $query2) or die("Query Unsuccessful");
+
+                  if (mysqli_num_rows($drinks) > 0) {
+                    while ($drink = mysqli_fetch_assoc($drinks)) {
+                  ?>
+                      <div class="col-md-4 text-center">
+                        <div class="menu-wrap">
+                          <a href="products/product-single.php?id=<?php echo $drink['id']; ?>" class="menu-img img mb-4" style="background-image: url(images/<?php echo $drink['image']; ?>)"></a>
+                          <div class="text">
+                            <h3><a href="products/product-single.php?id=<?php echo $drink['id']; ?>"><?php echo $drink['name']; ?></a></h3>
+                            <p>
+                              <?php echo $drink['description']; ?>
+                            </p>
+                            <p class="price"><span>$<?php echo $drink['price']; ?></span></p>
+                            <p>
+                              <a href="products/product-single.php?id=<?php echo $drink['id']; ?>" class="btn btn-primary btn-outline-primary">Show</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                  <?php }
+                  } ?>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
                 <div class="row">
                   <?php
                   // fetching drinks
@@ -302,7 +334,7 @@
                 </div>
               </div>
 
-              <div class="tab-pane fade" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-3-tab">
+              <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
                 <div class="row">
                   <?php
                   // fetching main dish
