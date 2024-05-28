@@ -160,8 +160,8 @@
       <div class="col-md-6">
         <h3 class="mb-5 heading-pricing ftco-animate">Starter</h3>
         <?php
-        // fetching drinks
-        $query2 = "SELECT * FROM products where type='drink'";
+        // fetching starters
+        $query2 = "SELECT * FROM products where type='starter'";
         $drinks = mysqli_query($conn, $query2) or die("Query Unsuccessful");
 
         if (mysqli_num_rows($drinks) > 0) {
@@ -188,8 +188,8 @@
       <div class="col-md-6">
         <h3 class="mb-5 heading-pricing ftco-animate">Main Dish</h3>
         <?php
-        // fetching drinks
-        $query2 = "SELECT * FROM products where type='drink'";
+        // fetching main dish
+        $query2 = "SELECT * FROM products where type='main dish'";
         $drinks = mysqli_query($conn, $query2) or die("Query Unsuccessful");
 
         if (mysqli_num_rows($drinks) > 0) {
