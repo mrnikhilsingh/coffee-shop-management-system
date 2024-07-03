@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php define("url", "http://localhost/workspace/ns-coffee"); ?>
+<?php define("url", "http://localhost/workspace/ns_coffee"); ?>
 
 <!DOCTYPE html>
 <html lang="en">

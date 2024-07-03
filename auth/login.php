@@ -5,7 +5,7 @@
 //if user logged in 
 //he should not able to access register page
 if (isset($_SESSION['username'])) {
-  header("Location: http://localhost/workspace/ns-coffee/index.php");
+  header("Location: http://localhost/workspace/ns_coffee/index.php");
 }
 
 if (isset($_POST['submit'])) {
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
           $_SESSION['email'] = $row['email'];
           $_SESSION['user_id'] = $row['id'];
           // redirect to index page
-          header("Location: http://localhost/workspace/ns-coffee/index.php");
+          header("Location: http://localhost/workspace/ns_coffee/index.php");
         } else {
           echo "<script>alert('email or password is incorrect !!')</script>";
         }

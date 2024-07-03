@@ -1,6 +1,6 @@
 <?php
 session_start();
-define("ADMINURL", "http://localhost/workspace/ns-coffee/admin-panel");
+define("ADMINURL", "http://localhost/workspace/ns_coffee/admin-panel");
 
 ?>
 <!DOCTYPE html>

@@ -94,8 +94,8 @@
   visibility: hidden;
 }
 .owl-carousel.owl-drag .owl-item {
-  -ms-touch-action: none;
-  touch-action: none;
+  -ms-touch-action: auto;
+  touch-action: auto;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

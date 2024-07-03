@@ -6,7 +6,7 @@
 // if admin not logged in
 // denied to access bookings page
 if (!isset($_SESSION['admin_name'])) {
-  header("Location: http://localhost/workspace/ns-coffee/index.php");
+  header("Location: http://localhost/workspace/ns_coffee/index.php");
 }
 
 //fetch all bookings from db

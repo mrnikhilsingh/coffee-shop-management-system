@@ -5,7 +5,7 @@
 //if user logged in 
 //he should not able to access this page
 if (isset($_SESSION['username'])) {
-    header("Location: http://localhost/workspace/ns-coffee/index.php");
+    header("Location: http://localhost/workspace/ns_coffee/index.php");
 }
 
 // code for forgot password

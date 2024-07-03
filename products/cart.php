@@ -6,7 +6,7 @@
 // if user not logged in
 // denied to access cart page
 if (!isset($_SESSION['user_id'])) {
-  header("Location: http://localhost/workspace/ns-coffee/index.php");
+  header("Location: http://localhost/workspace/ns_coffee/index.php");
 }
 
 //show products in cart

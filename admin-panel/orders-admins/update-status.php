@@ -6,13 +6,13 @@
 // if admin logged in trying to directly access this page
 // denied to access
 if (!isset($_SERVER['HTTP_REFERER'])) {
-    echo "<script>window.location.href = 'http://localhost/workspace/ns-coffee/admin-panel'</script>";
+    echo "<script>window.location.href = 'http://localhost/workspace/ns_coffee/admin-panel'</script>";
 }
 
 // if admin not logged in
 // denied to access this page
 if (!isset($_SESSION['admin_name'])) {
-    header("Location: http://localhost/workspace/ns-coffee/admin-panel");
+    header("Location: http://localhost/workspace/ns_coffee/admin-panel");
 }
 
 // check for order id received or not
@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
         mysqli_query($conn, $update_query) or die("Query Unsuccessful");
 
         echo "<script>alert('Order Status Updated !!')</script>";
-        echo "<script>window.location.href = 'http://localhost/workspace/ns-coffee/admin-panel/orders-admins/show-orders.php'</script>";
+        echo "<script>window.location.href = 'http://localhost/workspace/ns_coffee/admin-panel/orders-admins/show-orders.php'</script>";
     }
 }
 

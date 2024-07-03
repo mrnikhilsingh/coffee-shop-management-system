@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 
     echo "<script>alert('New Admin Added Successfully !!')</script>";
     // redirect to login page
-    echo "<script>window.location.href='http://localhost/workspace/ns-coffee/admin-panel/admins/create-admins.php'</script>";
+    echo "<script>window.location.href='http://localhost/workspace/ns_coffee/admin-panel/admins/create-admins.php'</script>";
   }
 }
 
