@@ -2,7 +2,7 @@
 
 The Coffee Shop Management System is a web-based application designed to streamline the management and operations of a coffee shop. It includes features for managing bookings, products, users, and administrative tasks. Built with HTML, CSS, JS, and PHP as Backend and MySQL as Database.
 
-![NS Coffee Preview](https://github.com/mrnikhilsingh/coffee-shop-management-system/images/website-screenshots/hero-section.png)
+![NS Coffee Preview](https://github.com/mrnikhilsingh/coffee-shop-management-system/blob/main/images/website-screenshots/hero-section.png)
 
 ## Installation
 
@@ -42,11 +42,10 @@ Follow these steps to set up NS Coffee locally using XAMPP:
    - Open `http://localhost/phpmyadmin` in a web browser to access phpMyAdmin.
    - Create a new MySQL database by clicking "new" option on left sidebar. Name it `ns_coffee`.
    - Import the database schema from the provided SQL file (`db/database.sql`).
-   - Update the database configuration in [`db/connection.php`](db/connection.php) with your database credentials (For example: LOCALHOST, USERNAME, PASSWORD, DATABASE). Follow this step only if you have changed the default database name or credentials.
 
 6. Start the Development Server:
    - Open XAMPP and start the Apache and MySQL services (If not already).
-   - Launch a web browser and visit `http://localhost/ns-coffee`.
+   - Launch a web browser and visit `http://localhost/ns_coffee`.
 
 Congratulations! You have successfully set up Ns Coffee on your machine.
 
@@ -111,15 +110,15 @@ Experience Minglr firsthand with a live website available at [Website Link](http
 
 | Login Page                                                                                                              |
 | ----------------------------------------------------------------------------------------------------------------------- |
-| ![Login Page](https://github.com/mrnikhilsingh/coffee-shop-management-system/images/website-screenshots/login_page.png) |
+| ![Login Page](https://github.com/mrnikhilsingh/coffee-shop-management-system/blob/main/images/website-screenshots/login_page.png) |
 
 | Logout Page                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------- |
-| ![Logout Page](https://github.com/mrnikhilsingh/coffee-shop-management-system/images/website-screenshots/logout_page.png) |
+| ![Logout Page](https://github.com/mrnikhilsingh/coffee-shop-management-system/blob/main/images/website-screenshots/logout_page.png) |
 
 | Menu Page                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------- |
-| ![Menu Page](https://github.com/mrnikhilsingh/coffee-shop-management-system/images/website-screenshots/menu_page.png) |
+| ![Menu Page](https://github.com/mrnikhilsingh/coffee-shop-management-system/blob/main/images/website-screenshots/menu_page.png) |
 
 ## Technologies Used
 
