@@ -1,4 +1,4 @@
-# NS Coffe - Coffee Shop Management System
+# NS Coffee - Coffee Shop Management System
 
 The Coffee Shop Management System is a web-based application designed to streamline the management and operations of a coffee shop. It includes features for managing bookings, products, users, and administrative tasks. Built with HTML, CSS, JS, and PHP as Backend and MySQL as Database.
 
@@ -41,11 +41,11 @@ Follow these steps to set up NS Coffee locally using XAMPP:
    - Open the XAMPP control panel and start the Apache and MySQL services.
    - Open `http://localhost/phpmyadmin` in a web browser to access phpMyAdmin.
    - Create a new MySQL database by clicking "new" option on left sidebar. Name it `ns_coffee`.
-   - Import the database schema from the provided SQL file (`db/database.sql`).
+   - Import the database schema from the provided SQL file (`db/ns_coffee.sql`).
 
 6. Start the Development Server:
    - Open XAMPP and start the Apache and MySQL services (If not already).
-   - Launch a web browser and visit `http://localhost/ns_coffee`.
+   - Launch a web browser and visit `http://localhost` and then project folder.
 
 Congratulations! You have successfully set up Ns Coffee on your machine.
 
@@ -114,7 +114,7 @@ Experience Minglr firsthand with a live website available at [Website Link](http
 
 | Logout Page                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------- |
-| ![Logout Page](https://github.com/mrnikhilsingh/coffee-shop-management-system/blob/main/images/website-screenshots/logout_page.png) |
+| ![Register Page](https://github.com/mrnikhilsingh/coffee-shop-management-system/blob/main/images/website-screenshots/register_page.png) |
 
 | Menu Page                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------- |
