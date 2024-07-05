@@ -4,6 +4,10 @@ The Coffee Shop Management System is a web-based application designed to streaml
 
 ![NS Coffee Preview](https://github.com/mrnikhilsingh/coffee-shop-management-system/blob/main/images/website-screenshots/hero-section.png)
 
+## Demo
+
+Experience Ns Coffee firsthand with a live website available at [Website Link](https://nscoffee.freewebhostmost.com/).
+
 ## Installation
 
 Follow these steps to set up NS Coffee locally using XAMPP:
@@ -101,10 +105,6 @@ Congratulations! You have successfully set up Ns Coffee on your machine.
 - **Feedback System:** Allows customers to provide feedback on products and services, which administrators can review and address.
 
 These features provide a robust foundation for efficiently managing a coffee shop, ensuring smooth operations and enhanced customer experience.
-
-## Demo
-
-Experience Minglr firsthand with a live website available at [Website Link](https://nscoffee.freewebhostmost.com/).
 
 ## Screenshots
 
