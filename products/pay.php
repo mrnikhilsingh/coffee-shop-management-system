@@ -12,8 +12,8 @@ if (!isset($_SERVER['HTTP_REFERER'])) {
 // if user not logged in
 // denied to access pay page
 if (!isset($_SESSION['user_id'])) {
-    header("Location: http://localhost/workspace/ns_coffee/index.php");
-  }
+    header("Location: https://nscoffee.free.nf");
+}
 
 ?>
 

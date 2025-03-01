@@ -6,7 +6,7 @@
 // if user not logged in
 // denied to access bookings page
 if (!isset($_SESSION['user_id'])) {
-    header("Location: http://localhost/workspace/ns_coffee/index.php");
+    header("Location: https://nscoffee.free.nf");
 }
 
 //fetch all orders from db
@@ -63,7 +63,7 @@ $result = mysqli_query($conn, $query) or die("Query Unsuccessful");
                                             <?php echo $order['last_name']; ?>
                                         </td>
                                         <td>
-                                            <?php echo $order['street_address'],", ", $order['country'], ", ", $order['town']; ?>
+                                            <?php echo $order['street_address'], ", ", $order['country'], ", ", $order['town']; ?>
                                         </td>
                                         <td>
                                             <?php echo $order['zip_code']; ?>

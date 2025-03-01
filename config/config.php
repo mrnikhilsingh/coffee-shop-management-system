@@ -1,11 +1,15 @@
 <?php
+// Load environment variables
+$env = parse_ini_file('.env');
 
-$server = "localhost";
-$username = "root";
-$password = "";
-$database = "ns_coffee";
+// Define the database server name, username, password, and database name
+$server_name = $env['DB_HOST'];
+$user_name = $env['DB_USER'];
+$password = $env['DB_PASS'];
+$db_name = $env['DB_NAME'];
 
-$conn = mysqli_connect($server, $username, $password, $database);
+// Create a new connection to the MySQL database
+$conn = mysqli_connect($server_name, $user_name, $password, $db_name);
 
 // Check if the connection was successful
 if (!$conn) {

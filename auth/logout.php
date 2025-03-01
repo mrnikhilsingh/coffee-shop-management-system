@@ -4,4 +4,4 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: http://localhost/workspace/ns_coffee/index.php");
+header("Location: https://nscoffee.free.nf");

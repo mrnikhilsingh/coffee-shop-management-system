@@ -5,7 +5,7 @@
 // if admin not logged in
 // denied to access this page
 if (!isset($_SESSION['admin_name'])) {
-  header("Location: http://localhost/workspace/ns_coffee/index.php");
+  header("Location: https://nscoffee.free.nf");
 }
 
 //add new product
@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
       }
 
       // validate image name (no spaces allowed)
-      if (preg_match('/\s/',$imageName)) {
+      if (preg_match('/\s/', $imageName)) {
         die("image name should not contain any blank spaces.");
       }
 
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
 
       // redirect to login page
       echo "<script>alert('Product Added !!')</script>";
-      echo "<script>window.location.href='http://localhost/workspace/ns_coffee/admin-panel/products-admins/show-products.php'</script>";
+      echo "<script>window.location.href='https://nscoffee.free.nf/admin-panel/products-admins/show-products.php'</script>";
     } else {
       echo "Error: " . $_FILES['image']['error'];
     }

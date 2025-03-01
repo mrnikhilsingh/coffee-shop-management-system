@@ -1,3 +1,0 @@
-*.hack linguist-language=PHP  # Treat .hack files as PHP
-*.generated linguist-generated=true  # Ignore generated files
-*.md linguist-documentation=true  # Ignore markdown from language stats

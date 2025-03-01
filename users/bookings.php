@@ -6,7 +6,7 @@
 // if user not logged in
 // denied to access bookings page
 if (!isset($_SESSION['user_id'])) {
-    header("Location: http://localhost/workspace/ns_coffee/index.php");
+    header("Location: https://nscoffee.free.nf");
 }
 
 //fetch all bookings from db

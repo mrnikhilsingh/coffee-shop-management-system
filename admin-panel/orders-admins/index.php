@@ -49,7 +49,7 @@
         </svg>
     </center>
     <center>
-        <h3><a href="http://localhost/workspace/ns_coffee/admin-panel/">Go to Home</a></h3>
+        <h3><a href="https://nscoffee.free.nf/admin-panel/">Go to Home</a></h3>
     </center>
 </body>
 

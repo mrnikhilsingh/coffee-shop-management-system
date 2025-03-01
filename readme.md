@@ -6,7 +6,7 @@ The Coffee Shop Management System is a web-based application designed to streaml
 
 ## Demo
 
-Experience Ns Coffee firsthand with a live website available at [Website Link](https://nscoffee.freewebhostmost.com/).
+Experience Ns Coffee firsthand with a live website available at [Website Link](https://nscoffee.free.nf/).
 
 ## Installation
 
@@ -108,16 +108,16 @@ These features provide a robust foundation for efficiently managing a coffee sho
 
 ## Screenshots
 
-| Login Page                                                                                                              |
-| ----------------------------------------------------------------------------------------------------------------------- |
+| Login Page                                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------------------- |
 | ![Login Page](https://github.com/mrnikhilsingh/coffee-shop-management-system/blob/main/images/website-screenshots/login_page.png) |
 
-| Logout Page                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- |
+| Logout Page                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Register Page](https://github.com/mrnikhilsingh/coffee-shop-management-system/blob/main/images/website-screenshots/register_page.png) |
 
-| Menu Page                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------- |
+| Menu Page                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------- |
 | ![Menu Page](https://github.com/mrnikhilsingh/coffee-shop-management-system/blob/main/images/website-screenshots/menu_page.png) |
 
 ## Technologies Used

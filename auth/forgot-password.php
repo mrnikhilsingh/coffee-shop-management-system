@@ -5,7 +5,7 @@
 //if user logged in 
 //he should not able to access this page
 if (isset($_SESSION['username'])) {
-    header("Location: http://localhost/workspace/ns_coffee/index.php");
+    header("Location: https://nscoffee.free.nf");
 }
 
 // code for forgot password
@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
         mysqli_query($conn, $query) or die("Query Unsuccessful !!");
 
         echo "<script>alert('Password Forgot Successfully')</script>";
-    }else {
+    } else {
         echo "<script>alert('username or email is does not match')</script>";
     }
 }

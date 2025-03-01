@@ -4,7 +4,7 @@
 //if user logged in 
 //he should not able to access register page
 if (isset($_SESSION['username'])) {
-  header("Location: http://localhost/workspace/ns_coffee/index.php");
+  header("Location: https://nscoffee.free.nf");
 }
 //code for user registration 
 if (isset($_POST['submit'])) {

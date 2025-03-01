@@ -6,7 +6,7 @@
 // if admin not logged in
 // denied to access this page
 if (!isset($_SESSION['admin_name'])) {
-  header("Location: http://localhost/workspace/ns_coffee/index.php");
+  header("Location: https://nscoffee.free.nf");
 }
 
 //fetch all orders from db

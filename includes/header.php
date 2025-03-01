@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php define("url", "http://localhost/workspace/ns_coffee"); ?>
+<?php define("url", ".."); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +7,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NS Coffee</title>
+  <title>NS Coffee | Delicious Taste</title>
+  <link rel="icon" type="image/x-icon" href="<?php echo url; ?>/images/logo.png">
   <!-- Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +48,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="<?php echo url; ?>index.php">N.S &nbsp;&nbsp;Coffee<small>Delicious Taste</small></a>
+      <a class="navbar-brand" href="<?php echo url; ?>/index.php">N.S &nbsp;&nbsp;Coffee<small>Delicious Taste</small></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
       </button>

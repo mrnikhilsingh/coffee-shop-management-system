@@ -1,12 +1,12 @@
 <?php require "layouts/header.php"; ?>
 <?php require "../config/config.php"; ?>
 
-<?php 
+<?php
 
 //if admin logged out in 
 //he should not able to access index page
 if (!isset($_SESSION['admin_name'])) {
-  header("Location: http://localhost/workspace/ns_coffee/admin-panel/admins/login.php");
+  header("Location: https://nscoffee.free.nf/admin-panel/admins/login.php");
 }
 
 // products

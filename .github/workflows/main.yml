@@ -3,7 +3,7 @@ name: Deploy to InfinityFree
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
   deploy:
@@ -12,11 +12,18 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Create .env file with Database Credentials
+        run: |
+          echo "DB_HOST=${{ secrets.DB_HOST }}" > .env
+          echo "DB_USER=${{ secrets.DB_USER }}" >> .env
+          echo "DB_PASS=${{ secrets.DB_PASS }}" >> .env
+          echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
+
       - name: Upload files via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: "./"  # Change if your files are in a subfolder
-          server-dir: "/htdocs/"  # This is the public directory in InfinityFree
+          local-dir: "./" # Change if your files are in a subfolder
+          server-dir: "/htdocs/" # This is the public directory in InfinityFree

@@ -1,7 +1,7 @@
 <?php require "../layouts/header.php"; ?>
 <?php require "../../config/config.php"; ?>
 
-<?php 
+<?php
 
 //code for admin registration 
 if (isset($_POST['submit'])) {
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 
     echo "<script>alert('New Admin Added Successfully !!')</script>";
     // redirect to login page
-    echo "<script>window.location.href='http://localhost/workspace/ns_coffee/admin-panel/admins/create-admins.php'</script>";
+    echo "<script>window.location.href='https://nscoffee.free.nf/admin-panel/admins/create-admins.php'</script>";
   }
 }
 
@@ -35,8 +35,8 @@ if (isset($_POST['submit'])) {
             <div class="form-outline mb-4">
               <input type="text" name="name" class="form-control" placeholder="name" />
             </div>
-             <!-- Email input -->
-             <div class="form-outline mb-4 mt-4">
+            <!-- Email input -->
+            <div class="form-outline mb-4 mt-4">
               <input type="email" name="email" class="form-control" placeholder="email" />
             </div>
             <div class="form-outline mb-4">
