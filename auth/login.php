@@ -3,7 +3,7 @@
 
 <?php
 //if user logged in 
-//he should not able to access register page
+//he should not able to access login page
 if (isset($_SESSION['username'])) {
   header("Location: https://nscoffee.free.nf");
 }
