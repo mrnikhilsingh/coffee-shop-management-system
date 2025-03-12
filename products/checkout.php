@@ -32,10 +32,11 @@ if (isset($_POST['submit'])) {
   $query = "INSERT INTO orders (first_name, last_name, country, street_address, town, zip_code, phone, email, user_id, status, total_price) VALUES ('{$first_name}','{$last_name}','{$country}','{$street_address}','{$town_city}','{$zip_code}','{$phone}','{$email}','{$user_id}','{$status}','{$total_price}')";
   mysqli_query($conn, $query) or die("Query Unsuccessful");
 
-  echo "<script>window.location.href = 'pay.php'</script>";
+  echo "<script>
+          alert('Added to cart successfully');
+          window.location.href = 'pay.php';
+        </script>";
 }
-
-
 ?>
 
 <section class="home-slider owl-carousel">

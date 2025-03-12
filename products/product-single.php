@@ -51,7 +51,7 @@ if (isset($_GET['id'])) {
 				<div class="row slider-text justify-content-center align-items-center">
 					<div class="col-md-7 col-sm-12 text-center ftco-animate">
 						<h1 class="mb-3 mt-5 bread">Product Detail</h1>
-						<p class="breadcrumbs"><span class="mr-2"><a href="<?php echo url; ?>/index.html">Home</a></span> <span>Product Detail</span></p>
+						<p class="breadcrumbs"><span class="mr-2"><a href="<?php echo url; ?>/index.php">Home</a></span> <span>Product Detail</span></p>
 					</div>
 				</div>
 			</div>
@@ -121,7 +121,7 @@ if (isset($_GET['id'])) {
 							<?php } ?>
 						<?php } else {
 						?>
-							<a href="<?php echo url; ?>/auth/login.php"  class="btn btn-primary py-3 px-4 cart" name="submit" type="submit">
+							<a href="<?php echo url; ?>/auth/login.php" class="btn btn-primary py-3 px-4 cart" name="submit" type="submit">
 								Login to Add to cart
 							</a>
 						<?php } ?>

@@ -15,7 +15,7 @@
           </p>
           <p>
             <a href="auth/login.php" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
-            <a href="menu.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
+            <a href="menu.php" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
           </p>
         </div>
       </div>
@@ -35,7 +35,7 @@
           </p>
           <p>
             <a href="auth/login.php" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
-            <a href="menu.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
+            <a href="menu.php" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
           </p>
         </div>
       </div>
@@ -55,7 +55,7 @@
           </p>
           <p>
             <a href="auth/login.php" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
-            <a href="menu.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
+            <a href="menu.php" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
           </p>
         </div>
       </div>
