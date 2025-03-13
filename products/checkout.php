@@ -33,8 +33,7 @@ if (isset($_POST['submit'])) {
   mysqli_query($conn, $query) or die("Query Unsuccessful");
 
   echo "<script>
-          alert('Added to cart successfully');
-          window.location.href = 'pay.php';
+          window.location.href = 'delete-cart.php';
         </script>";
 }
 ?>
