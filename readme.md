@@ -1,3 +1,9 @@
+<p align="center">
+   <img src="https://img.shields.io/github/stars/mrnikhilsingh/coffee-shop-management-system" alt="GitHub Repo stars">  
+   <img src="https://img.shields.io/github/license/mrnikhilsingh/coffee-shop-management-system" alt="GitHub License">  
+   <img src="https://img.shields.io/github/forks/mrnikhilsingh/coffee-shop-management-system" alt="GitHub forks">  
+</p>
+
 # NS Coffee - Coffee Shop Management System
 
 The Coffee Shop Management System is a web-based application designed to streamline the management and operations of a coffee shop. It includes features for managing bookings, products, users, and administrative tasks. Built with HTML, CSS, JS, and PHP as Backend and MySQL as Database.
