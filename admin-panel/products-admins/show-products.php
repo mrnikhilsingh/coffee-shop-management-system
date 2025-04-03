@@ -1,12 +1,12 @@
-<?php require "../layouts/header.php"; ?>
-<?php require "../../config/config.php"; ?>
+<?php require_once "../layouts/header.php"; ?>
 
 <?php
 
 // if admin not logged in
 // denied to access this page
 if (!isset($_SESSION['admin_name'])) {
-  header("Location: https://nscoffee.free.nf");
+  header("Location: " . url . "/index.php");
+  exit();
 }
 
 //fetch all orders from db

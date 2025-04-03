@@ -1,5 +1,4 @@
-<?php require "../includes/header.php"; ?>
-<?php require "../config/config.php"; ?>
+<?php require_once "../includes/header.php"; ?>
 
 <?php
 
@@ -7,12 +6,14 @@
 // denied to access
 if (!isset($_SERVER['HTTP_REFERER'])) {
     echo "<script>window.location.href = '../index.php'</script>";
+    exit();
 }
 
 // if user not logged in
 // denied to access delete page
 if (!isset($_SESSION['user_id'])) {
-    header("Location: https://nscoffee.free.nf");
+    header("Location: " . url . "/index.php"); // Redirect to the home page
+    exit();
 }
 
 if (isset($_GET['id'])) {

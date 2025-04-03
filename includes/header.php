@@ -1,5 +1,7 @@
-<?php session_start(); ?>
-<?php define("url", ".."); ?>
+<?php
+session_start();
+require_once __DIR__ . '/../config/config.php'; // Include the configuration file
+?>
 
 <!DOCTYPE html>
 <html lang="en">

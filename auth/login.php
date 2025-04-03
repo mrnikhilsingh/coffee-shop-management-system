@@ -1,11 +1,10 @@
-<?php require "../includes/header.php"; ?>
-<?php require "../config/config.php"; ?>
-
+<?php require_once "../includes/header.php"; ?>
 <?php
 //if user logged in 
 //he should not able to access login page
 if (isset($_SESSION['username'])) {
-  header("Location: https://nscoffee.free.nf");
+  echo "<script>window.location.href = '" . url . "/index.php';</script>";
+  exit();
 }
 
 if (isset($_POST['submit'])) {
@@ -31,7 +30,8 @@ if (isset($_POST['submit'])) {
           $_SESSION['email'] = $row['email'];
           $_SESSION['user_id'] = $row['id'];
           // redirect to index page
-          header("Location: https://nscoffee.free.nf");
+          echo "<script>alert('Logged in Successfully')</script>";
+          echo "<script>window.location.href = '" . url . "/index.php';</script>";
         } else {
           echo "<script>alert('email or password is incorrect !!')</script>";
         }
@@ -100,4 +100,4 @@ if (isset($_POST['submit'])) {
 </section>
 <!-- .section -->
 
-<?php require "../includes/footer.php"; ?>
+<?php require_once "../includes/footer.php"; ?>

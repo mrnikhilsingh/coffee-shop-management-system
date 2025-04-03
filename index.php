@@ -1,5 +1,4 @@
-<?php require "includes/header.php"; ?>
-<?php require "config/config.php"; ?>
+<?php require_once "includes/header.php"; ?>
 
 <section class="home-slider owl-carousel">
   <div class="slider-item" style="background-image: url(images/bg_1.jpg)">
@@ -536,4 +535,4 @@
   })
 </script>
 
-<?php require "includes/footer.php"; ?>
+<?php require_once "includes/footer.php"; ?>

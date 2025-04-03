@@ -10487,6 +10487,7 @@ h5,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
 }
 
 .ftco-cart button i {

@@ -1,12 +1,11 @@
-<?php require "layouts/header.php"; ?>
-<?php require "../config/config.php"; ?>
+<?php require_once "layouts/header.php"; ?>
 
 <?php
 
-//if admin logged out in 
-//he should not able to access index page
+// If admin is not logged in, redirect to the login page
 if (!isset($_SESSION['admin_name'])) {
-  header("Location: https://nscoffee.free.nf/admin-panel/admins/login.php");
+  header("Location: " . url . "/admin-panel/admins/login.php");
+  exit();
 }
 
 // products

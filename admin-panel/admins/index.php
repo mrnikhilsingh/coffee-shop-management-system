@@ -1,3 +1,7 @@
+<?php
+require_once '../../../config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +53,7 @@
         </svg>
     </center>
     <center>
-        <h3><a href="https://nscoffee.free.nf/admin-panel/">Go to Home</a></h3>
+        <h3><a href="<?php echo url; ?>/admin-panel/">Go to Home</a></h3>
     </center>
 </body>
 

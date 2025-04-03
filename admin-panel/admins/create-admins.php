@@ -1,25 +1,24 @@
-<?php require "../layouts/header.php"; ?>
-<?php require "../../config/config.php"; ?>
+<?php require_once "../layouts/header.php"; ?>
 
 <?php
 
-//code for admin registration 
+// Code for admin registration 
 if (isset($_POST['submit'])) {
   if (empty($_POST['name']) or empty($_POST['email']) or empty($_POST['password'])) {
-    echo "<script>alert('one or more inputs are empty !!')</script>";
+    echo "<script>alert('One or more inputs are empty !!')</script>";
   } else {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     // $password = password_hash($_POST['password'],PASSWORD_DEFAULT); 
 
-    // sql query
+    // SQL query
     $query = "INSERT INTO admins (admin_name, email, password) VALUES ('{$name}','{$email}','{$password}')";
     mysqli_query($conn, $query) or die("Query Unsuccessful");
 
     echo "<script>alert('New Admin Added Successfully !!')</script>";
-    // redirect to login page
-    echo "<script>window.location.href='https://nscoffee.free.nf/admin-panel/admins/create-admins.php'</script>";
+    // Redirect to the same page dynamically
+    echo "<script>window.location.href='" . url . "/admin-panel/admins/create-admins.php'</script>";
   }
 }
 

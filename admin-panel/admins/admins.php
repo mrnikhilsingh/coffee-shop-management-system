@@ -1,5 +1,4 @@
-<?php require "../layouts/header.php"; ?>
-<?php require "../../config/config.php"; ?>
+<?php require_once "../layouts/header.php"; ?>
 
 <?php
 
@@ -25,16 +24,17 @@ $result = mysqli_query($conn, $query) or die("Query Unsuccessful");
               </tr>
             </thead>
             <tbody>
-              <?php 
+              <?php
               if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
               ?>
-              <tr>
-                <th scope="row"><?php echo $row['id']; ?></th>
-                <td><?php echo $row['admin_name']; ?></td>
-                <td><?php echo $row['email']; ?></td>
-              </tr>
-              <?php }} ?>
+                  <tr>
+                    <th scope="row"><?php echo $row['id']; ?></th>
+                    <td><?php echo $row['admin_name']; ?></td>
+                    <td><?php echo $row['email']; ?></td>
+                  </tr>
+              <?php }
+              } ?>
             </tbody>
           </table>
         </div>

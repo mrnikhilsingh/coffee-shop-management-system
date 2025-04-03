@@ -1,12 +1,11 @@
-<?php require "../includes/header.php"; ?>
-<?php require "../config/config.php"; ?>
+<?php require_once "../includes/header.php"; ?>
 
 <?php
 
 // if user not logged in
 // denied to access cart page
 if (!isset($_SESSION['user_id'])) {
-  header("Location: https://nscoffee.free.nf");
+  header("Location: " . url . "/index.php"); // Redirect to the home page
 }
 
 //show products in cart
@@ -164,4 +163,4 @@ if (isset($_POST['checkout'])) {
   </div>
 </section>
 
-<?php require "../includes/footer.php"; ?>
+<?php require_once "../includes/footer.php"; ?>

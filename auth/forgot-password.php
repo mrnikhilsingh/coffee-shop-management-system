@@ -1,11 +1,11 @@
-<?php require "../includes/header.php"; ?>
-<?php require "../config/config.php"; ?>
+<?php require_once "../includes/header.php"; ?>
 
 <?php
 //if user logged in 
 //he should not able to access this page
 if (isset($_SESSION['username'])) {
-    header("Location: https://nscoffee.free.nf");
+    header("Location: " . url . "/index.php");
+    exit();
 }
 
 // code for forgot password
@@ -119,4 +119,4 @@ if (isset($_POST['submit'])) {
     })
 </script>
 
-<?php require "../includes/footer.php"; ?>
+<?php require_once "../includes/footer.php"; ?>

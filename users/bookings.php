@@ -1,12 +1,12 @@
-<?php require "../includes/header.php"; ?>
-<?php require "../config/config.php"; ?>
+<?php require_once "../includes/header.php"; ?>
 
 <?php
 
 // if user not logged in
 // denied to access bookings page
 if (!isset($_SESSION['user_id'])) {
-    header("Location: https://nscoffee.free.nf");
+    header("Location: " . url . "/index.php"); // Redirect to the home page
+    exit();
 }
 
 //fetch all bookings from db
@@ -95,4 +95,4 @@ $result = mysqli_query($conn, $query) or die("Query Unsuccessful");
     </div>
 </section>
 
-<?php require "../includes/footer.php"; ?>
+<?php require_once "../includes/footer.php"; ?>

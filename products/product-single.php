@@ -1,5 +1,4 @@
-<?php require "../includes/header.php"; ?>
-<?php require "../config/config.php"; ?>
+<?php require_once "../includes/header.php"; ?>
 
 <?php
 
@@ -161,4 +160,4 @@ if (isset($_GET['id'])) {
 		</div>
 	</section>
 
-	<?php require "../includes/footer.php"; ?>
+	<?php require_once "../includes/footer.php"; ?>

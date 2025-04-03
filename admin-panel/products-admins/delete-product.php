@@ -1,10 +1,10 @@
-<?php require "../../config/config.php"; ?>
+<?php require_once "../../config/config.php"; ?>
 <?php
 
 // if admin logged in trying to directly access delete page
 // denied to access
 if (!isset($_SERVER['HTTP_REFERER'])) {
-    echo "<script>window.location.href = 'https://nscoffee.free.nf/admin-panel'</script>";
+    echo "<script>window.location.href = '" . url . "/admin-panel'</script>";
 }
 
 $product_id = $_GET["id"];
@@ -20,7 +20,7 @@ $delete_query = "DELETE FROM products WHERE id = '{$product_id}'";
 mysqli_query($conn, $delete_query) or die("Query Unsuccessful");
 
 echo "<script>alert('Order Deleted !!')</script>";
-echo "<script>window.location.href='https://nscoffee.free.nf/admin-panel/products-admins/show-products.php'</script>";
+echo "<script>window.location.href='" . url . "/admin-panel/products-admins/show-products.php'</script>";
 
 mysqli_close($conn);
 

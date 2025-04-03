@@ -4,4 +4,7 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: https://nscoffee.free.nf");
+require_once __DIR__ . '/../config/config.php'; // Include the configuration file
+
+header("Location: " . url . "/index.php"); // Redirect to the home page
+exit();

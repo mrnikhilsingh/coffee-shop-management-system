@@ -1,19 +1,36 @@
 <?php
-// full path to the .env file
-$env_file = $_SERVER['DOCUMENT_ROOT'] . '/.env';
+// Check if running on a local development environment
+if ($_SERVER['HTTP_HOST'] === 'localhost') {
+    // Local database settings (for XAMPP/MAMP)
+    $server_name = "localhost";
+    $user_name = "root";  // Default XAMPP user
+    $password = "";       // Default XAMPP password (empty)
+    $db_name = "ns_coffee"; // Your local database name
 
-// Check if .env file exists before reading
-if (file_exists($env_file)) {
-    $env = parse_ini_file($env_file);
+    // Define the base URL for the local environment
+    define("url", "http://localhost/workspace/coffee-shop-management-system");
+    define("ADMINURL", "http://localhost/workspace/coffee-shop-management-system/admin-panel");
 } else {
-    die("❌ Error: .env file is missing! Please upload it to your server.");
-}
+    // Live database settings
+    $env_file = $_SERVER['DOCUMENT_ROOT'] . '/.env';
 
-// Database connection details
-$server_name = $env['DB_HOST'] ?? '';
-$user_name = $env['DB_USER'] ?? '';
-$password = $env['DB_PASS'] ?? '';
-$db_name = $env['DB_NAME'] ?? '';
+    // Check if the .env file exists
+    if (file_exists($env_file)) {
+        $env = parse_ini_file($env_file);
+    } else {
+        die("❌ Error: .env file is missing! Please upload it to your server.");
+    }
+
+    // Load database credentials from .env
+    $server_name = $env['DB_HOST'] ?? '';
+    $user_name = $env['DB_USER'] ?? '';
+    $password = $env['DB_PASS'] ?? '';
+    $db_name = $env['DB_NAME'] ?? '';
+
+    // Define the base URL for the live environment
+    define("url", "https://" . $_SERVER['HTTP_HOST']);
+    define("ADMINURL", "https://" . $_SERVER['HTTP_HOST'] . "/admin-panel");
+}
 
 // Create a connection to the MySQL database
 $conn = mysqli_connect($server_name, $user_name, $password, $db_name);

@@ -1,10 +1,10 @@
-<?php require "../includes/header.php"; ?>
-<?php require "../config/config.php"; ?>
+<?php require_once "../includes/header.php"; ?>
 <?php
 //if user logged in 
 //he should not able to access register page
 if (isset($_SESSION['username'])) {
-  header("Location: https://nscoffee.free.nf");
+  header("Location: " . url . "/index.php");
+  exit();
 }
 //code for user registration 
 if (isset($_POST['submit'])) {
@@ -89,4 +89,4 @@ if (isset($_POST['submit'])) {
 </section>
 <!-- .section -->
 
-<?php require "../includes/footer.php"; ?>
+<?php require_once "../includes/footer.php"; ?>

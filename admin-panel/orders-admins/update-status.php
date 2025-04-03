@@ -1,18 +1,18 @@
-<?php require "../layouts/header.php"; ?>
-<?php require "../../config/config.php"; ?>
+<?php require_once "../layouts/header.php"; ?>
 
 <?php
 
 // if admin logged in trying to directly access this page
 // denied to access
 if (!isset($_SERVER['HTTP_REFERER'])) {
-    echo "<script>window.location.href = 'https://nscoffee.free.nf/admin-panel'</script>";
+    echo "<script>window.location.href = '" . url . "/admin-panel'</script>";
 }
 
 // if admin not logged in
 // denied to access this page
 if (!isset($_SESSION['admin_name'])) {
-    header("Location: https://nscoffee.free.nf/admin-panel");
+    header("Location: " . url . "/admin-panel");
+    exit();
 }
 
 // check for order id received or not
@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
         mysqli_query($conn, $update_query) or die("Query Unsuccessful");
 
         echo "<script>alert('Order Status Updated !!')</script>";
-        echo "<script>window.location.href = 'https://nscoffee.free.nf/admin-panel/orders-admins/show-orders.php'</script>";
+        echo "<script>window.location.href = '" . url . "/admin-panel/orders-admins/show-orders.php'</script>";
     }
 }
 

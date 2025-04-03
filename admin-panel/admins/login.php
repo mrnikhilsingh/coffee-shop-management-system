@@ -1,11 +1,11 @@
-<?php require "../layouts/header.php"; ?>
-<?php require "../../config/config.php"; ?>
+<?php require_once "../layouts/header.php"; ?>
 
 <?php
 //if user logged in 
 //he should not able to access login page
 if (isset($_SESSION['admin_name'])) {
-  header("Location: https://nscoffee.free.nf/admin-panel");
+  header("Location: " . url . "/admin-panel");
+  exit();
 }
 
 if (isset($_POST['submit'])) {
@@ -31,7 +31,8 @@ if (isset($_POST['submit'])) {
           $_SESSION['email'] = $row['email'];
           $_SESSION['admin_id'] = $row['id'];
           // redirect to index page
-          header("Location: https://nscoffee.free.nf/admin-panel");
+          header("Location: " . url . "/admin-panel");
+          exit();
         } else {
           echo "<script>alert('email or password is incorrect !!')</script>";
         }

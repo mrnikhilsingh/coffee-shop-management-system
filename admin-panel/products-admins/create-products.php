@@ -1,11 +1,11 @@
-<?php require "../layouts/header.php"; ?>
-<?php require "../../config/config.php"; ?>
+<?php require_once "../layouts/header.php"; ?>
 
 <?php
 // if admin not logged in
 // denied to access this page
 if (!isset($_SESSION['admin_name'])) {
-  header("Location: https://nscoffee.free.nf");
+  header("Location: " . url . "/index.php"); // Redirect to the home page
+  exit();
 }
 
 //add new product
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
 
       // redirect to login page
       echo "<script>alert('Product Added !!')</script>";
-      echo "<script>window.location.href='https://nscoffee.free.nf/admin-panel/products-admins/show-products.php'</script>";
+      echo "<script>window.location.href='" . url . "/admin-panel/products-admins/show-products.php'</script>";
     } else {
       echo "Error: " . $_FILES['image']['error'];
     }

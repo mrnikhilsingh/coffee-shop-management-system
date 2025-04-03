@@ -1,6 +1,6 @@
 <?php
 session_start();
-define("ADMINURL", "https://nscoffee.free.nf/admin-panel");
+require_once __DIR__ . '/../../config/config.php'; // Include the configuration file
 
 ?>
 <!DOCTYPE html>
