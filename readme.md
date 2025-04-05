@@ -30,7 +30,7 @@ Follow these steps to set up NS Coffee locally using XAMPP:
 
 3. Clone the GitHub repository:
 
-   - Head over to C:\xampp\htdocs in your Windows Explorer. (If you installed XAMPP in a different location, you must navigate to that folder instead.)
+   - Head over to `C:\xampp\htdocs` in your Windows Explorer. (If you installed XAMPP in a different location, you must navigate to that folder instead.)
    - Open the terminal or command prompt in the same folder.
    - Execute the following command to change the directory to `htdocs`:
 
@@ -50,14 +50,33 @@ Follow these steps to set up NS Coffee locally using XAMPP:
 
    - Open the XAMPP control panel and start the Apache and MySQL services.
    - Open `http://localhost/phpmyadmin` in a web browser to access phpMyAdmin.
-   - Create a new MySQL database by clicking "new" option on left sidebar. Name it `ns_coffee`.
+   - Create a new MySQL database by clicking the "New" option on the left sidebar. Name it `ns_coffee`.
    - Import the database schema from the provided SQL file (`db/ns_coffee.sql`).
 
-6. Start the Development Server:
-   - Open XAMPP and start the Apache and MySQL services (If not already).
-   - Launch a web browser and visit `http://localhost` and then project folder.
+6. Update Configuration in `config.php`:
 
-Congratulations! You have successfully set up Ns Coffee on your machine.
+   - Navigate to the `config` folder in the project directory.
+   - Open the `config.php` file and update the following settings to match your local server credentials:
+
+     ```php
+     // Local database settings
+     $server_name = "localhost"; // Default for XAMPP
+     $user_name = "root";        // Default username for XAMPP
+     $password = "";             // Default password for XAMPP (empty)
+     $db_name = "ns_coffee";     // Name of the database you created
+     ```
+
+   - Update the base URL for the local environment according to your cloned repo location:
+     ```php
+     define("url", "http://localhost/coffee-shop-management-system");
+     define("ADMINURL", "http://localhost/coffee-shop-management-system/admin-panel");
+     ```
+
+7. Start the Development Server:
+   - Open XAMPP and start the Apache and MySQL services (if not already running).
+   - Launch a web browser and visit `http://localhost/coffee-shop-management-system` to access the project.
+
+Congratulations! You have successfully set up NS Coffee on your machine.
 
 `Note:` Steps may vary slightly based on your specific operating system and XAMPP configuration. Make sure to adjust the paths and commands accordingly.
 
