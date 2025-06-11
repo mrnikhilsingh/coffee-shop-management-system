@@ -9,7 +9,7 @@ require_once __DIR__ . '/../config/config.php'; // Include the configuration fil
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NS Coffee offers a delicious taste of freshly brewed coffee, a variety of menu options, and excellent services. Visit us to enjoy a great coffee experience." />
+  <meta name="description" content="NS Coffee Delicious Taste, offers a delicious taste of freshly brewed coffee, a variety of menu options, and excellent services. Visit us to enjoy a great coffee experience. Made with love by Nikhil Singh" />
   <title>NS Coffee | Delicious Taste</title>
   <link rel="icon" type="image/x-icon" href="<?php echo url; ?>/images/logo.png">
   <!-- Poppins -->
