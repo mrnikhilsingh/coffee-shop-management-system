@@ -53,14 +53,14 @@ if (isset($_POST['submit'])) {
           <form method="POST" class="p-auto" action="login.php">
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <input type="email" name="email" id="" class="form-control" placeholder="Email" />
+              <input type="email" name="email" id="email" class="form-control" autocomplete="username" placeholder="Email" />
             </div>
             <!-- Password input -->
             <div class="form-outline mb-4">
-              <input type="password" name="password" id="" placeholder="Password" class="form-control" />
+              <input type="password" name="password" id="password" placeholder="Password" autocomplete="current-password" class="form-control" />
             </div>
             <!-- Submit button -->
-            <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">Login</button>
+            <button type="submit" name="submit" class="btn btn-primary mb-4 text-center">Login</button>
           </form>
         </div>
       </div>
