@@ -31,7 +31,7 @@ $result = mysqli_query($conn, $query) or die("Query Unsuccessful");
                   <tr>
                     <th scope="row"><?php echo $row['id']; ?></th>
                     <td><?php echo $row['admin_name']; ?></td>
-                    <td><?php echo $row['email']; ?></td>
+                    <td class="admin-email"><?php echo $row['email']; ?></td>
                   </tr>
               <?php }
               } ?>

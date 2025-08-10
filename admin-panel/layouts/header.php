@@ -14,6 +14,7 @@ require_once __DIR__ . '/../../config/config.php'; // Include the configuration 
     <link href="<?php echo ADMINURL; ?>/styles/style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <body>

@@ -15,6 +15,9 @@ body {
 .header-top {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
+.admin-email {
+  word-break: break-all;
+}
 @media (min-width: 992px) {
   #wrapper {
     margin-left: 200px;
