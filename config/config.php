@@ -2,9 +2,9 @@
 // Check if running on a local development environment
 if ($_SERVER['HTTP_HOST'] === 'localhost') {
     // Local database settings (for XAMPP/MAMP)
-    $server_name = "localhost";
-    $user_name = "root";  // Default XAMPP user
-    $password = "";       // Default XAMPP password (empty)
+    $server_name = "windows";
+    $user_name = "Aurittro Hossain";  // Default XAMPP user
+    $password = "@Urittro7";       // Default XAMPP password (empty)
     $db_name = "ns_coffee"; // Your local database name
 
     // Define the base URL for the local environment
